@@ -1,4 +1,4 @@
-# Install script for directory: /home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project
+# Install script for directory: /home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/span
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/span/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

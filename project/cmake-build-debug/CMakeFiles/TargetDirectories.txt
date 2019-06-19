@@ -1,3 +1,0 @@
-/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/cmake-build-debug/CMakeFiles/project.dir

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.12)
-project(project)
+project(span)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_library(project SHARED library.cpp library.h)
+add_library(span SHARED library.cpp library.h)

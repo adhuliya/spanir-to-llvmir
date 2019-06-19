@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -g  -shared -Wl,-soname,libspan.so -o libspan.so CMakeFiles/span.dir/library.cpp.o 

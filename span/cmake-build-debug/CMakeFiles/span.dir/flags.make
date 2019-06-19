@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_FLAGS = -g -fPIC   -std=gnu++14
 
-CXX_DEFINES = -Dproject_EXPORTS
+CXX_DEFINES = -Dspan_EXPORTS
 
 CXX_INCLUDES = 
 

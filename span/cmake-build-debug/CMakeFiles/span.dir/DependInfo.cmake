@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/library.cpp" "/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/cmake-build-debug/CMakeFiles/project.dir/library.cpp.o"
+  "/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/span/library.cpp" "/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/span/cmake-build-debug/CMakeFiles/span.dir/library.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
