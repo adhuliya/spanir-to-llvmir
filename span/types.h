@@ -13,6 +13,9 @@ namespace span {
   // Some global typedefs
   typedef int32_t BasicBlockId;
   typedef int32_t CFGNodeId;
+  typedef std::string VarName;
+  typedef std::string FunctionName;
+  typedef std::string RecordName;
 
   namespace ir {
     namespace types {
