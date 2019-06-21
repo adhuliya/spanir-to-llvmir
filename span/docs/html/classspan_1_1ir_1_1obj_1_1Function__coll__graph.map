@@ -1,7 +1,0 @@
-<map id="span::ir::obj::Function" name="span::ir::obj::Function">
-<area shape="rect" id="node2" href="$classspan_1_1ir_1_1types_1_1Function.html" title="span::ir::types::Function" alt="" coords="15,109,178,136"/>
-<area shape="rect" id="node3" href="$classspan_1_1ir_1_1types_1_1Type.html" title="span::ir::types::Type" alt="" coords="5,5,148,32"/>
-<area shape="rect" id="node4" href="$classspan_1_1ir_1_1obj_1_1CFG.html" title="Control Flow Graph. " alt="" coords="203,109,329,136"/>
-<area shape="rect" id="node5" href="$classspan_1_1ir_1_1obj_1_1CFGNode.html" title="A CFG Node. " alt="" coords="182,5,339,32"/>
-<area shape="rect" id="node6" href="$classspan_1_1ir_1_1obj_1_1BB.html" title="A basic block containing a sequence of instructions. " alt="" coords="364,5,480,32"/>
-</map>
