@@ -1,0 +1,98 @@
+\hypertarget{classspan_1_1ir_1_1obj_1_1CFG}{}\section{span\+:\+:ir\+:\+:obj\+:\+:C\+FG Class Reference}
+\label{classspan_1_1ir_1_1obj_1_1CFG}\index{span\+::ir\+::obj\+::\+C\+FG@{span\+::ir\+::obj\+::\+C\+FG}}
+
+
+Control Flow Graph.  
+
+
+
+
+{\ttfamily \#include $<$objects.\+h$>$}
+
+
+
+Collaboration diagram for span\+:\+:ir\+:\+:obj\+:\+:C\+FG\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{classspan_1_1ir_1_1obj_1_1CFG__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ \hyperlink{namespacespan_ab988dafbd25ab39838239b91d6a86214}{Basic\+Block\+Id}, \hyperlink{classspan_1_1ir_1_1obj_1_1BB}{BB} $>$ \hyperlink{classspan_1_1ir_1_1obj_1_1CFG_ab397d5c00efd9dd6a2ffeb545c16b71b}{bb\+Map}
+\item 
+std\+::vector$<$ B\+B\+Edge\+Id\+Edge $>$ \hyperlink{classspan_1_1ir_1_1obj_1_1CFG_a2480bf75b73356170ebb4578d4245f33}{bb\+Edges}
+\item 
+\hyperlink{classspan_1_1ir_1_1obj_1_1BB}{BB} $\ast$ \hyperlink{classspan_1_1ir_1_1obj_1_1CFG_a2a13f446a8367c04a854848ca378d2a3}{start\+BB}
+\item 
+\hyperlink{classspan_1_1ir_1_1obj_1_1BB}{BB} $\ast$ \hyperlink{classspan_1_1ir_1_1obj_1_1CFG_a7e5b207c46341e1635e9a98bc4b08163}{end\+BB}
+\item 
+std\+::unordered\+\_\+map$<$ \hyperlink{namespacespan_a34e8d849ca2007fe03cb1817685d08bf}{C\+F\+G\+Node\+Id}, \hyperlink{classspan_1_1ir_1_1obj_1_1CFGNode}{C\+F\+G\+Node} $>$ \hyperlink{classspan_1_1ir_1_1obj_1_1CFG_af11c6fd7a30810fbd49d9162a6b1d5da}{cfg\+Node\+Map}
+\item 
+std\+::vector$<$ \hyperlink{namespacespan_1_1ir_1_1obj_a8896662ab566cd79d401c0753d3c4120}{C\+F\+G\+Node\+Id\+Edge} $>$ \hyperlink{classspan_1_1ir_1_1obj_1_1CFG_a2352d9b13704a1074df3c8b1553a4c31}{cfg\+Edges}
+\item 
+\hyperlink{classspan_1_1ir_1_1obj_1_1CFGNode}{C\+F\+G\+Node} $\ast$ \hyperlink{classspan_1_1ir_1_1obj_1_1CFG_a990fe73e4c7c5ea8c6fb563f694787fe}{start\+Node}
+\item 
+\hyperlink{classspan_1_1ir_1_1obj_1_1CFGNode}{C\+F\+G\+Node} $\ast$ \hyperlink{classspan_1_1ir_1_1obj_1_1CFG_ad6da10e59a29576d2842dbc3ce34cdeb}{end\+Node}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Control Flow Graph. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classspan_1_1ir_1_1obj_1_1CFG_a2480bf75b73356170ebb4578d4245f33}\label{classspan_1_1ir_1_1obj_1_1CFG_a2480bf75b73356170ebb4578d4245f33}} 
+\index{span\+::ir\+::obj\+::\+C\+FG@{span\+::ir\+::obj\+::\+C\+FG}!bb\+Edges@{bb\+Edges}}
+\index{bb\+Edges@{bb\+Edges}!span\+::ir\+::obj\+::\+C\+FG@{span\+::ir\+::obj\+::\+C\+FG}}
+\subsubsection{\texorpdfstring{bb\+Edges}{bbEdges}}
+{\footnotesize\ttfamily std\+::vector$<$B\+B\+Edge\+Id\+Edge$>$ span\+::ir\+::obj\+::\+C\+F\+G\+::bb\+Edges\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classspan_1_1ir_1_1obj_1_1CFG_ab397d5c00efd9dd6a2ffeb545c16b71b}\label{classspan_1_1ir_1_1obj_1_1CFG_ab397d5c00efd9dd6a2ffeb545c16b71b}} 
+\index{span\+::ir\+::obj\+::\+C\+FG@{span\+::ir\+::obj\+::\+C\+FG}!bb\+Map@{bb\+Map}}
+\index{bb\+Map@{bb\+Map}!span\+::ir\+::obj\+::\+C\+FG@{span\+::ir\+::obj\+::\+C\+FG}}
+\subsubsection{\texorpdfstring{bb\+Map}{bbMap}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$\hyperlink{namespacespan_ab988dafbd25ab39838239b91d6a86214}{Basic\+Block\+Id}, \hyperlink{classspan_1_1ir_1_1obj_1_1BB}{BB}$>$ span\+::ir\+::obj\+::\+C\+F\+G\+::bb\+Map\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classspan_1_1ir_1_1obj_1_1CFG_a2352d9b13704a1074df3c8b1553a4c31}\label{classspan_1_1ir_1_1obj_1_1CFG_a2352d9b13704a1074df3c8b1553a4c31}} 
+\index{span\+::ir\+::obj\+::\+C\+FG@{span\+::ir\+::obj\+::\+C\+FG}!cfg\+Edges@{cfg\+Edges}}
+\index{cfg\+Edges@{cfg\+Edges}!span\+::ir\+::obj\+::\+C\+FG@{span\+::ir\+::obj\+::\+C\+FG}}
+\subsubsection{\texorpdfstring{cfg\+Edges}{cfgEdges}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{namespacespan_1_1ir_1_1obj_a8896662ab566cd79d401c0753d3c4120}{C\+F\+G\+Node\+Id\+Edge}$>$ span\+::ir\+::obj\+::\+C\+F\+G\+::cfg\+Edges\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classspan_1_1ir_1_1obj_1_1CFG_af11c6fd7a30810fbd49d9162a6b1d5da}\label{classspan_1_1ir_1_1obj_1_1CFG_af11c6fd7a30810fbd49d9162a6b1d5da}} 
+\index{span\+::ir\+::obj\+::\+C\+FG@{span\+::ir\+::obj\+::\+C\+FG}!cfg\+Node\+Map@{cfg\+Node\+Map}}
+\index{cfg\+Node\+Map@{cfg\+Node\+Map}!span\+::ir\+::obj\+::\+C\+FG@{span\+::ir\+::obj\+::\+C\+FG}}
+\subsubsection{\texorpdfstring{cfg\+Node\+Map}{cfgNodeMap}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$\hyperlink{namespacespan_a34e8d849ca2007fe03cb1817685d08bf}{C\+F\+G\+Node\+Id}, \hyperlink{classspan_1_1ir_1_1obj_1_1CFGNode}{C\+F\+G\+Node}$>$ span\+::ir\+::obj\+::\+C\+F\+G\+::cfg\+Node\+Map\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classspan_1_1ir_1_1obj_1_1CFG_a7e5b207c46341e1635e9a98bc4b08163}\label{classspan_1_1ir_1_1obj_1_1CFG_a7e5b207c46341e1635e9a98bc4b08163}} 
+\index{span\+::ir\+::obj\+::\+C\+FG@{span\+::ir\+::obj\+::\+C\+FG}!end\+BB@{end\+BB}}
+\index{end\+BB@{end\+BB}!span\+::ir\+::obj\+::\+C\+FG@{span\+::ir\+::obj\+::\+C\+FG}}
+\subsubsection{\texorpdfstring{end\+BB}{endBB}}
+{\footnotesize\ttfamily \hyperlink{classspan_1_1ir_1_1obj_1_1BB}{BB}$\ast$ span\+::ir\+::obj\+::\+C\+F\+G\+::end\+BB\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classspan_1_1ir_1_1obj_1_1CFG_ad6da10e59a29576d2842dbc3ce34cdeb}\label{classspan_1_1ir_1_1obj_1_1CFG_ad6da10e59a29576d2842dbc3ce34cdeb}} 
+\index{span\+::ir\+::obj\+::\+C\+FG@{span\+::ir\+::obj\+::\+C\+FG}!end\+Node@{end\+Node}}
+\index{end\+Node@{end\+Node}!span\+::ir\+::obj\+::\+C\+FG@{span\+::ir\+::obj\+::\+C\+FG}}
+\subsubsection{\texorpdfstring{end\+Node}{endNode}}
+{\footnotesize\ttfamily \hyperlink{classspan_1_1ir_1_1obj_1_1CFGNode}{C\+F\+G\+Node}$\ast$ span\+::ir\+::obj\+::\+C\+F\+G\+::end\+Node\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classspan_1_1ir_1_1obj_1_1CFG_a2a13f446a8367c04a854848ca378d2a3}\label{classspan_1_1ir_1_1obj_1_1CFG_a2a13f446a8367c04a854848ca378d2a3}} 
+\index{span\+::ir\+::obj\+::\+C\+FG@{span\+::ir\+::obj\+::\+C\+FG}!start\+BB@{start\+BB}}
+\index{start\+BB@{start\+BB}!span\+::ir\+::obj\+::\+C\+FG@{span\+::ir\+::obj\+::\+C\+FG}}
+\subsubsection{\texorpdfstring{start\+BB}{startBB}}
+{\footnotesize\ttfamily \hyperlink{classspan_1_1ir_1_1obj_1_1BB}{BB}$\ast$ span\+::ir\+::obj\+::\+C\+F\+G\+::start\+BB\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classspan_1_1ir_1_1obj_1_1CFG_a990fe73e4c7c5ea8c6fb563f694787fe}\label{classspan_1_1ir_1_1obj_1_1CFG_a990fe73e4c7c5ea8c6fb563f694787fe}} 
+\index{span\+::ir\+::obj\+::\+C\+FG@{span\+::ir\+::obj\+::\+C\+FG}!start\+Node@{start\+Node}}
+\index{start\+Node@{start\+Node}!span\+::ir\+::obj\+::\+C\+FG@{span\+::ir\+::obj\+::\+C\+FG}}
+\subsubsection{\texorpdfstring{start\+Node}{startNode}}
+{\footnotesize\ttfamily \hyperlink{classspan_1_1ir_1_1obj_1_1CFGNode}{C\+F\+G\+Node}$\ast$ span\+::ir\+::obj\+::\+C\+F\+G\+::start\+Node\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{objects_8h}{objects.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,86 @@
+\hypertarget{namespacespan_1_1ir_1_1obj}{}\section{span\+:\+:ir\+:\+:obj Namespace Reference}
+\label{namespacespan_1_1ir_1_1obj}\index{span\+::ir\+::obj@{span\+::ir\+::obj}}
+
+
+Objects in a translation unit.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classspan_1_1ir_1_1obj_1_1BB}{BB}
+\begin{DoxyCompactList}\small\item\em A basic block containing a sequence of instructions. \end{DoxyCompactList}\item 
+class \hyperlink{classspan_1_1ir_1_1obj_1_1BBEdge}{B\+B\+Edge}
+\begin{DoxyCompactList}\small\item\em A labeled edge connecting basic blocks. \end{DoxyCompactList}\item 
+class \hyperlink{classspan_1_1ir_1_1obj_1_1CFG}{C\+FG}
+\begin{DoxyCompactList}\small\item\em Control Flow Graph. \end{DoxyCompactList}\item 
+class \hyperlink{classspan_1_1ir_1_1obj_1_1CFGNode}{C\+F\+G\+Node}
+\begin{DoxyCompactList}\small\item\em A \hyperlink{classspan_1_1ir_1_1obj_1_1CFG}{C\+FG} Node. \end{DoxyCompactList}\item 
+class \hyperlink{classspan_1_1ir_1_1obj_1_1CFGNodeEdge}{C\+F\+G\+Node\+Edge}
+\begin{DoxyCompactList}\small\item\em A labeled edge connecting \hyperlink{classspan_1_1ir_1_1obj_1_1CFG}{C\+FG} Nodes. \end{DoxyCompactList}\item 
+class \hyperlink{classspan_1_1ir_1_1obj_1_1Function}{Function}
+\begin{DoxyCompactList}\small\item\em A function declaration/definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::pair$<$ \hyperlink{namespacespan_ab988dafbd25ab39838239b91d6a86214}{Basic\+Block\+Id}, std\+::pair$<$ \hyperlink{namespacespan_ab988dafbd25ab39838239b91d6a86214}{Basic\+Block\+Id}, \hyperlink{namespacespan_1_1ir_1_1obj_a3687553dc31f18fb1bd62e0798a3f7f0}{Edge\+Kind} $>$ $>$ \hyperlink{namespacespan_1_1ir_1_1obj_a67ae67fe77ea84d3152bc68919e50c7f}{B\+B\+Id\+Edge}
+\begin{DoxyCompactList}\small\item\em Edge from bb id to bb id (useful for serialization/deserialization) \end{DoxyCompactList}\item 
+typedef std\+::pair$<$ \hyperlink{namespacespan_a34e8d849ca2007fe03cb1817685d08bf}{C\+F\+G\+Node\+Id}, std\+::pair$<$ \hyperlink{namespacespan_a34e8d849ca2007fe03cb1817685d08bf}{C\+F\+G\+Node\+Id}, \hyperlink{namespacespan_1_1ir_1_1obj_a3687553dc31f18fb1bd62e0798a3f7f0}{Edge\+Kind} $>$ $>$ \hyperlink{namespacespan_1_1ir_1_1obj_a8896662ab566cd79d401c0753d3c4120}{C\+F\+G\+Node\+Id\+Edge}
+\begin{DoxyCompactList}\small\item\em Edge from \hyperlink{classspan_1_1ir_1_1obj_1_1CFGNode}{C\+F\+G\+Node} id to \hyperlink{classspan_1_1ir_1_1obj_1_1CFGNode}{C\+F\+G\+Node} id (useful for serialization/deserialization) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespacespan_1_1ir_1_1obj_a3687553dc31f18fb1bd62e0798a3f7f0}{Edge\+Kind} \{ \hyperlink{namespacespan_1_1ir_1_1obj_a3687553dc31f18fb1bd62e0798a3f7f0a1f5ee4019ffe09583948f65d14d7afce}{F\+A\+L\+S\+E\+\_\+\+E\+D\+GE}, 
+\hyperlink{namespacespan_1_1ir_1_1obj_a3687553dc31f18fb1bd62e0798a3f7f0a233ed7b2a720909aa5557ba66d0fb25c}{T\+R\+U\+E\+\_\+\+E\+D\+GE}, 
+\hyperlink{namespacespan_1_1ir_1_1obj_a3687553dc31f18fb1bd62e0798a3f7f0adc309b8217eea09bb5438dba823068c6}{U\+N\+C\+O\+N\+D\+\_\+\+E\+D\+GE}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Objects in a translation unit. 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{namespacespan_1_1ir_1_1obj_a67ae67fe77ea84d3152bc68919e50c7f}\label{namespacespan_1_1ir_1_1obj_a67ae67fe77ea84d3152bc68919e50c7f}} 
+\index{span\+::ir\+::obj@{span\+::ir\+::obj}!B\+B\+Id\+Edge@{B\+B\+Id\+Edge}}
+\index{B\+B\+Id\+Edge@{B\+B\+Id\+Edge}!span\+::ir\+::obj@{span\+::ir\+::obj}}
+\subsubsection{\texorpdfstring{B\+B\+Id\+Edge}{BBIdEdge}}
+{\footnotesize\ttfamily typedef std\+::pair$<$\hyperlink{namespacespan_ab988dafbd25ab39838239b91d6a86214}{Basic\+Block\+Id}, std\+::pair$<$\hyperlink{namespacespan_ab988dafbd25ab39838239b91d6a86214}{Basic\+Block\+Id}, \hyperlink{namespacespan_1_1ir_1_1obj_a3687553dc31f18fb1bd62e0798a3f7f0}{Edge\+Kind}$>$ $>$ \hyperlink{namespacespan_1_1ir_1_1obj_a67ae67fe77ea84d3152bc68919e50c7f}{span\+::ir\+::obj\+::\+B\+B\+Id\+Edge}}
+
+
+
+Edge from bb id to bb id (useful for serialization/deserialization) 
+
+\mbox{\Hypertarget{namespacespan_1_1ir_1_1obj_a8896662ab566cd79d401c0753d3c4120}\label{namespacespan_1_1ir_1_1obj_a8896662ab566cd79d401c0753d3c4120}} 
+\index{span\+::ir\+::obj@{span\+::ir\+::obj}!C\+F\+G\+Node\+Id\+Edge@{C\+F\+G\+Node\+Id\+Edge}}
+\index{C\+F\+G\+Node\+Id\+Edge@{C\+F\+G\+Node\+Id\+Edge}!span\+::ir\+::obj@{span\+::ir\+::obj}}
+\subsubsection{\texorpdfstring{C\+F\+G\+Node\+Id\+Edge}{CFGNodeIdEdge}}
+{\footnotesize\ttfamily typedef std\+::pair$<$\hyperlink{namespacespan_a34e8d849ca2007fe03cb1817685d08bf}{C\+F\+G\+Node\+Id} , std\+::pair$<$\hyperlink{namespacespan_a34e8d849ca2007fe03cb1817685d08bf}{C\+F\+G\+Node\+Id} , \hyperlink{namespacespan_1_1ir_1_1obj_a3687553dc31f18fb1bd62e0798a3f7f0}{Edge\+Kind}$>$ $>$ \hyperlink{namespacespan_1_1ir_1_1obj_a8896662ab566cd79d401c0753d3c4120}{span\+::ir\+::obj\+::\+C\+F\+G\+Node\+Id\+Edge}}
+
+
+
+Edge from \hyperlink{classspan_1_1ir_1_1obj_1_1CFGNode}{C\+F\+G\+Node} id to \hyperlink{classspan_1_1ir_1_1obj_1_1CFGNode}{C\+F\+G\+Node} id (useful for serialization/deserialization) 
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespacespan_1_1ir_1_1obj_a3687553dc31f18fb1bd62e0798a3f7f0}\label{namespacespan_1_1ir_1_1obj_a3687553dc31f18fb1bd62e0798a3f7f0}} 
+\index{span\+::ir\+::obj@{span\+::ir\+::obj}!Edge\+Kind@{Edge\+Kind}}
+\index{Edge\+Kind@{Edge\+Kind}!span\+::ir\+::obj@{span\+::ir\+::obj}}
+\subsubsection{\texorpdfstring{Edge\+Kind}{EdgeKind}}
+{\footnotesize\ttfamily enum \hyperlink{namespacespan_1_1ir_1_1obj_a3687553dc31f18fb1bd62e0798a3f7f0}{span\+::ir\+::obj\+::\+Edge\+Kind}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+A\+L\+S\+E\+\_\+\+E\+D\+GE@{F\+A\+L\+S\+E\+\_\+\+E\+D\+GE}!span\+::ir\+::obj@{span\+::ir\+::obj}}\index{span\+::ir\+::obj@{span\+::ir\+::obj}!F\+A\+L\+S\+E\+\_\+\+E\+D\+GE@{F\+A\+L\+S\+E\+\_\+\+E\+D\+GE}}}\mbox{\Hypertarget{namespacespan_1_1ir_1_1obj_a3687553dc31f18fb1bd62e0798a3f7f0a1f5ee4019ffe09583948f65d14d7afce}\label{namespacespan_1_1ir_1_1obj_a3687553dc31f18fb1bd62e0798a3f7f0a1f5ee4019ffe09583948f65d14d7afce}} 
+F\+A\+L\+S\+E\+\_\+\+E\+D\+GE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+R\+U\+E\+\_\+\+E\+D\+GE@{T\+R\+U\+E\+\_\+\+E\+D\+GE}!span\+::ir\+::obj@{span\+::ir\+::obj}}\index{span\+::ir\+::obj@{span\+::ir\+::obj}!T\+R\+U\+E\+\_\+\+E\+D\+GE@{T\+R\+U\+E\+\_\+\+E\+D\+GE}}}\mbox{\Hypertarget{namespacespan_1_1ir_1_1obj_a3687553dc31f18fb1bd62e0798a3f7f0a233ed7b2a720909aa5557ba66d0fb25c}\label{namespacespan_1_1ir_1_1obj_a3687553dc31f18fb1bd62e0798a3f7f0a233ed7b2a720909aa5557ba66d0fb25c}} 
+T\+R\+U\+E\+\_\+\+E\+D\+GE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{U\+N\+C\+O\+N\+D\+\_\+\+E\+D\+GE@{U\+N\+C\+O\+N\+D\+\_\+\+E\+D\+GE}!span\+::ir\+::obj@{span\+::ir\+::obj}}\index{span\+::ir\+::obj@{span\+::ir\+::obj}!U\+N\+C\+O\+N\+D\+\_\+\+E\+D\+GE@{U\+N\+C\+O\+N\+D\+\_\+\+E\+D\+GE}}}\mbox{\Hypertarget{namespacespan_1_1ir_1_1obj_a3687553dc31f18fb1bd62e0798a3f7f0adc309b8217eea09bb5438dba823068c6}\label{namespacespan_1_1ir_1_1obj_a3687553dc31f18fb1bd62e0798a3f7f0adc309b8217eea09bb5438dba823068c6}} 
+U\+N\+C\+O\+N\+D\+\_\+\+E\+D\+GE&\\
+\hline
+
+\end{DoxyEnumFields}

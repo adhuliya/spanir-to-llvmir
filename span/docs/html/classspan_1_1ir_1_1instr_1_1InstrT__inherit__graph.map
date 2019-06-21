@@ -1,0 +1,5 @@
+<map id="span::ir::instr::InstrT" name="span::ir::instr::InstrT">
+<area shape="rect" id="node2" href="$classspan_1_1ir_1_1instr_1_1AssignI.html" title="span::ir::instr::AssignI" alt="" coords="5,80,156,107"/>
+<area shape="rect" id="node3" href="$classspan_1_1ir_1_1instr_1_1CallI.html" title="span::ir::instr::CallI" alt="" coords="181,80,314,107"/>
+<area shape="rect" id="node4" href="$classspan_1_1ir_1_1instr_1_1ReturnI.html" title="span::ir::instr::ReturnI" alt="" coords="338,80,487,107"/>
+</map>

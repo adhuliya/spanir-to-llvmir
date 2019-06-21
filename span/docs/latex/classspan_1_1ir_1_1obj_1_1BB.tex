@@ -1,0 +1,65 @@
+\hypertarget{classspan_1_1ir_1_1obj_1_1BB}{}\section{span\+:\+:ir\+:\+:obj\+:\+:BB Class Reference}
+\label{classspan_1_1ir_1_1obj_1_1BB}\index{span\+::ir\+::obj\+::\+BB@{span\+::ir\+::obj\+::\+BB}}
+
+
+A basic block containing a sequence of instructions.  
+
+
+
+
+{\ttfamily \#include $<$objects.\+h$>$}
+
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacespan_ab988dafbd25ab39838239b91d6a86214}{Basic\+Block\+Id} \hyperlink{classspan_1_1ir_1_1obj_1_1BB_ab0b77a9e575276adaed35fe9ea628e76}{id}
+\item 
+std\+::vector$<$ InstrT $\ast$ $>$ \hyperlink{classspan_1_1ir_1_1obj_1_1BB_a34eba87f2fb7244ae64b2467c5e7351b}{insns}
+\item 
+std\+::vector$<$ \hyperlink{classspan_1_1ir_1_1obj_1_1BBEdge}{B\+B\+Edge} $\ast$ $>$ \hyperlink{classspan_1_1ir_1_1obj_1_1BB_a68884bf0898798e8e03477567f231fbb}{in\+Edges}
+\item 
+std\+::vector$<$ \hyperlink{classspan_1_1ir_1_1obj_1_1BBEdge}{B\+B\+Edge} $\ast$ $>$ \hyperlink{classspan_1_1ir_1_1obj_1_1BB_afc465f9afb8573e400f52fa8641fba85}{out\+Edges}
+\item 
+std\+::vector$<$ \hyperlink{classspan_1_1ir_1_1obj_1_1CFGNode}{C\+F\+G\+Node} $>$ \hyperlink{classspan_1_1ir_1_1obj_1_1BB_a67209b5148f3bd5cd74657e2d3129e47}{nodes}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A basic block containing a sequence of instructions. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classspan_1_1ir_1_1obj_1_1BB_ab0b77a9e575276adaed35fe9ea628e76}\label{classspan_1_1ir_1_1obj_1_1BB_ab0b77a9e575276adaed35fe9ea628e76}} 
+\index{span\+::ir\+::obj\+::\+BB@{span\+::ir\+::obj\+::\+BB}!id@{id}}
+\index{id@{id}!span\+::ir\+::obj\+::\+BB@{span\+::ir\+::obj\+::\+BB}}
+\subsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily \hyperlink{namespacespan_ab988dafbd25ab39838239b91d6a86214}{Basic\+Block\+Id} span\+::ir\+::obj\+::\+B\+B\+::id\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classspan_1_1ir_1_1obj_1_1BB_a68884bf0898798e8e03477567f231fbb}\label{classspan_1_1ir_1_1obj_1_1BB_a68884bf0898798e8e03477567f231fbb}} 
+\index{span\+::ir\+::obj\+::\+BB@{span\+::ir\+::obj\+::\+BB}!in\+Edges@{in\+Edges}}
+\index{in\+Edges@{in\+Edges}!span\+::ir\+::obj\+::\+BB@{span\+::ir\+::obj\+::\+BB}}
+\subsubsection{\texorpdfstring{in\+Edges}{inEdges}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{classspan_1_1ir_1_1obj_1_1BBEdge}{B\+B\+Edge}$\ast$$>$ span\+::ir\+::obj\+::\+B\+B\+::in\+Edges\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classspan_1_1ir_1_1obj_1_1BB_a34eba87f2fb7244ae64b2467c5e7351b}\label{classspan_1_1ir_1_1obj_1_1BB_a34eba87f2fb7244ae64b2467c5e7351b}} 
+\index{span\+::ir\+::obj\+::\+BB@{span\+::ir\+::obj\+::\+BB}!insns@{insns}}
+\index{insns@{insns}!span\+::ir\+::obj\+::\+BB@{span\+::ir\+::obj\+::\+BB}}
+\subsubsection{\texorpdfstring{insns}{insns}}
+{\footnotesize\ttfamily std\+::vector$<$InstrT$\ast$$>$ span\+::ir\+::obj\+::\+B\+B\+::insns\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classspan_1_1ir_1_1obj_1_1BB_a67209b5148f3bd5cd74657e2d3129e47}\label{classspan_1_1ir_1_1obj_1_1BB_a67209b5148f3bd5cd74657e2d3129e47}} 
+\index{span\+::ir\+::obj\+::\+BB@{span\+::ir\+::obj\+::\+BB}!nodes@{nodes}}
+\index{nodes@{nodes}!span\+::ir\+::obj\+::\+BB@{span\+::ir\+::obj\+::\+BB}}
+\subsubsection{\texorpdfstring{nodes}{nodes}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{classspan_1_1ir_1_1obj_1_1CFGNode}{C\+F\+G\+Node}$>$ span\+::ir\+::obj\+::\+B\+B\+::nodes\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classspan_1_1ir_1_1obj_1_1BB_afc465f9afb8573e400f52fa8641fba85}\label{classspan_1_1ir_1_1obj_1_1BB_afc465f9afb8573e400f52fa8641fba85}} 
+\index{span\+::ir\+::obj\+::\+BB@{span\+::ir\+::obj\+::\+BB}!out\+Edges@{out\+Edges}}
+\index{out\+Edges@{out\+Edges}!span\+::ir\+::obj\+::\+BB@{span\+::ir\+::obj\+::\+BB}}
+\subsubsection{\texorpdfstring{out\+Edges}{outEdges}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{classspan_1_1ir_1_1obj_1_1BBEdge}{B\+B\+Edge}$\ast$$>$ span\+::ir\+::obj\+::\+B\+B\+::out\+Edges\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{objects_8h}{objects.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,61 @@
+\hypertarget{objects_8h}{}\section{objects.\+h File Reference}
+\label{objects_8h}\index{objects.\+h@{objects.\+h}}
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}op\+Kinds.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}instr.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}expr.\+h\char`\"{}}\newline
+Include dependency graph for objects.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{objects_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=136pt]{objects_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classspan_1_1ir_1_1obj_1_1BB}{span\+::ir\+::obj\+::\+BB}
+\begin{DoxyCompactList}\small\item\em A basic block containing a sequence of instructions. \end{DoxyCompactList}\item 
+class \hyperlink{classspan_1_1ir_1_1obj_1_1BBEdge}{span\+::ir\+::obj\+::\+B\+B\+Edge}
+\begin{DoxyCompactList}\small\item\em A labeled edge connecting basic blocks. \end{DoxyCompactList}\item 
+class \hyperlink{classspan_1_1ir_1_1obj_1_1CFGNode}{span\+::ir\+::obj\+::\+C\+F\+G\+Node}
+\begin{DoxyCompactList}\small\item\em A \hyperlink{classspan_1_1ir_1_1obj_1_1CFG}{C\+FG} Node. \end{DoxyCompactList}\item 
+class \hyperlink{classspan_1_1ir_1_1obj_1_1CFGNodeEdge}{span\+::ir\+::obj\+::\+C\+F\+G\+Node\+Edge}
+\begin{DoxyCompactList}\small\item\em A labeled edge connecting \hyperlink{classspan_1_1ir_1_1obj_1_1CFG}{C\+FG} Nodes. \end{DoxyCompactList}\item 
+class \hyperlink{classspan_1_1ir_1_1obj_1_1CFG}{span\+::ir\+::obj\+::\+C\+FG}
+\begin{DoxyCompactList}\small\item\em Control Flow Graph. \end{DoxyCompactList}\item 
+class \hyperlink{classspan_1_1ir_1_1obj_1_1Function}{span\+::ir\+::obj\+::\+Function}
+\begin{DoxyCompactList}\small\item\em A function declaration/definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacespan}{span}
+\begin{DoxyCompactList}\small\item\em Encapsulates all of S\+P\+AN. \end{DoxyCompactList}\item 
+ \hyperlink{namespacespan_1_1ir}{span\+::ir}
+\begin{DoxyCompactList}\small\item\em Contains all of S\+P\+AN IR. \end{DoxyCompactList}\item 
+ \hyperlink{namespacespan_1_1ir_1_1obj}{span\+::ir\+::obj}
+\begin{DoxyCompactList}\small\item\em Objects in a translation unit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::pair$<$ Basic\+Block\+Id, std\+::pair$<$ Basic\+Block\+Id, Edge\+Kind $>$ $>$ \hyperlink{namespacespan_1_1ir_1_1obj_a67ae67fe77ea84d3152bc68919e50c7f}{span\+::ir\+::obj\+::\+B\+B\+Id\+Edge}
+\begin{DoxyCompactList}\small\item\em Edge from bb id to bb id (useful for serialization/deserialization) \end{DoxyCompactList}\item 
+typedef std\+::pair$<$ C\+F\+G\+Node\+Id, std\+::pair$<$ C\+F\+G\+Node\+Id, Edge\+Kind $>$ $>$ \hyperlink{namespacespan_1_1ir_1_1obj_a8896662ab566cd79d401c0753d3c4120}{span\+::ir\+::obj\+::\+C\+F\+G\+Node\+Id\+Edge}
+\begin{DoxyCompactList}\small\item\em Edge from \hyperlink{classspan_1_1ir_1_1obj_1_1CFGNode}{C\+F\+G\+Node} id to \hyperlink{classspan_1_1ir_1_1obj_1_1CFGNode}{C\+F\+G\+Node} id (useful for serialization/deserialization) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespacespan_1_1ir_1_1obj_a3687553dc31f18fb1bd62e0798a3f7f0}{span\+::ir\+::obj\+::\+Edge\+Kind} \{ \hyperlink{namespacespan_1_1ir_1_1obj_a3687553dc31f18fb1bd62e0798a3f7f0a1f5ee4019ffe09583948f65d14d7afce}{span\+::ir\+::obj\+::\+F\+A\+L\+S\+E\+\_\+\+E\+D\+GE}, 
+\hyperlink{namespacespan_1_1ir_1_1obj_a3687553dc31f18fb1bd62e0798a3f7f0a233ed7b2a720909aa5557ba66d0fb25c}{span\+::ir\+::obj\+::\+T\+R\+U\+E\+\_\+\+E\+D\+GE}, 
+\hyperlink{namespacespan_1_1ir_1_1obj_a3687553dc31f18fb1bd62e0798a3f7f0adc309b8217eea09bb5438dba823068c6}{span\+::ir\+::obj\+::\+U\+N\+C\+O\+N\+D\+\_\+\+E\+D\+GE}
+ \}
+\end{DoxyCompactItemize}

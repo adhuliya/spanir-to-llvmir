@@ -1,14 +1,19 @@
+//===----------------------------------------------------------------------===//
+//  MIT License.
+//  Copyright (c) 2019 GRC Lab, CSE Dept., IIT Bombay, India
 //
-// Created by codeman on 19/6/19.
+//  Author: Anshuman Dhuliya [AD] (dhuliya@cse.iitb.ac.in)
 //
+//===----------------------------------------------------------------------===//
 
 #ifndef SPAN_EXPR_H
 #define SPAN_EXPR_H
 
-#include "OperationKinds.h"
+#include "opKinds.h"
 
 namespace span {
   namespace ir {
+    /// The expressions used in instructions.
     namespace expr {
       class Expr {
         Type *type;

@@ -1,0 +1,65 @@
+\hypertarget{opKinds_8h}{}\section{op\+Kinds.\+h File Reference}
+\label{opKinds_8h}\index{op\+Kinds.\+h@{op\+Kinds.\+h}}
+{\ttfamily \#include \char`\"{}op\+Kinds.\+def\char`\"{}}\newline
+Include dependency graph for op\+Kinds.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{opKinds_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{opKinds_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacespan}{span}
+\begin{DoxyCompactList}\small\item\em Encapsulates all of S\+P\+AN. \end{DoxyCompactList}\item 
+ \hyperlink{namespacespan_1_1ir}{span\+::ir}
+\begin{DoxyCompactList}\small\item\em Contains all of S\+P\+AN IR. \end{DoxyCompactList}\item 
+ \hyperlink{namespacespan_1_1ir_1_1op}{span\+::ir\+::op}
+\begin{DoxyCompactList}\small\item\em The operators used in expressions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{opKinds_8h_aa6796f43d0f5e6dfa0eb95157e2a436f}{C\+A\+S\+T\+\_\+\+O\+P\+E\+R\+A\+T\+I\+ON}(Name)~C\+K\+\_\+\#\#Name,
+\item 
+\#define \hyperlink{opKinds_8h_a1958130a3b607318055053ade29ce9ea}{B\+I\+N\+A\+R\+Y\+\_\+\+O\+P\+E\+R\+A\+T\+I\+ON}(Name,  Spelling)~B\+O\+\_\+\#\#Name,
+\item 
+\#define \hyperlink{opKinds_8h_a22fcfba7d3c5c7952149d70bfef3ecb0}{U\+N\+A\+R\+Y\+\_\+\+O\+P\+E\+R\+A\+T\+I\+ON}(Name,  Spelling)~U\+O\+\_\+\#\#Name,
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespacespan_1_1ir_1_1op_a04abe430db9937e27dc5df909415002b}{span\+::ir\+::op\+::\+Cast\+Kind} \begin{DoxyCompactList}\small\item\em Cast\+Kind -\/ The kind of operation required for a conversion. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespacespan_1_1ir_1_1op_a5741ac4595bea9e1d2821a8bb5d953e3}{span\+::ir\+::op\+::\+Binary\+Operator\+Kind} \begin{DoxyCompactList}\small\item\em All binary operators. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespacespan_1_1ir_1_1op_ab88ceb1213c3473d4f5fc848509dd181}{span\+::ir\+::op\+::\+Unary\+Operator\+Kind} \begin{DoxyCompactList}\small\item\em All unary operators. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{opKinds_8h_a1958130a3b607318055053ade29ce9ea}\label{opKinds_8h_a1958130a3b607318055053ade29ce9ea}} 
+\index{op\+Kinds.\+h@{op\+Kinds.\+h}!B\+I\+N\+A\+R\+Y\+\_\+\+O\+P\+E\+R\+A\+T\+I\+ON@{B\+I\+N\+A\+R\+Y\+\_\+\+O\+P\+E\+R\+A\+T\+I\+ON}}
+\index{B\+I\+N\+A\+R\+Y\+\_\+\+O\+P\+E\+R\+A\+T\+I\+ON@{B\+I\+N\+A\+R\+Y\+\_\+\+O\+P\+E\+R\+A\+T\+I\+ON}!op\+Kinds.\+h@{op\+Kinds.\+h}}
+\subsubsection{\texorpdfstring{B\+I\+N\+A\+R\+Y\+\_\+\+O\+P\+E\+R\+A\+T\+I\+ON}{BINARY\_OPERATION}}
+{\footnotesize\ttfamily \#define B\+I\+N\+A\+R\+Y\+\_\+\+O\+P\+E\+R\+A\+T\+I\+ON(\begin{DoxyParamCaption}\item[{}]{Name,  }\item[{}]{Spelling }\end{DoxyParamCaption})~B\+O\+\_\+\#\#Name,}
+
+\mbox{\Hypertarget{opKinds_8h_aa6796f43d0f5e6dfa0eb95157e2a436f}\label{opKinds_8h_aa6796f43d0f5e6dfa0eb95157e2a436f}} 
+\index{op\+Kinds.\+h@{op\+Kinds.\+h}!C\+A\+S\+T\+\_\+\+O\+P\+E\+R\+A\+T\+I\+ON@{C\+A\+S\+T\+\_\+\+O\+P\+E\+R\+A\+T\+I\+ON}}
+\index{C\+A\+S\+T\+\_\+\+O\+P\+E\+R\+A\+T\+I\+ON@{C\+A\+S\+T\+\_\+\+O\+P\+E\+R\+A\+T\+I\+ON}!op\+Kinds.\+h@{op\+Kinds.\+h}}
+\subsubsection{\texorpdfstring{C\+A\+S\+T\+\_\+\+O\+P\+E\+R\+A\+T\+I\+ON}{CAST\_OPERATION}}
+{\footnotesize\ttfamily \#define C\+A\+S\+T\+\_\+\+O\+P\+E\+R\+A\+T\+I\+ON(\begin{DoxyParamCaption}\item[{}]{Name }\end{DoxyParamCaption})~C\+K\+\_\+\#\#Name,}
+
+\mbox{\Hypertarget{opKinds_8h_a22fcfba7d3c5c7952149d70bfef3ecb0}\label{opKinds_8h_a22fcfba7d3c5c7952149d70bfef3ecb0}} 
+\index{op\+Kinds.\+h@{op\+Kinds.\+h}!U\+N\+A\+R\+Y\+\_\+\+O\+P\+E\+R\+A\+T\+I\+ON@{U\+N\+A\+R\+Y\+\_\+\+O\+P\+E\+R\+A\+T\+I\+ON}}
+\index{U\+N\+A\+R\+Y\+\_\+\+O\+P\+E\+R\+A\+T\+I\+ON@{U\+N\+A\+R\+Y\+\_\+\+O\+P\+E\+R\+A\+T\+I\+ON}!op\+Kinds.\+h@{op\+Kinds.\+h}}
+\subsubsection{\texorpdfstring{U\+N\+A\+R\+Y\+\_\+\+O\+P\+E\+R\+A\+T\+I\+ON}{UNARY\_OPERATION}}
+{\footnotesize\ttfamily \#define U\+N\+A\+R\+Y\+\_\+\+O\+P\+E\+R\+A\+T\+I\+ON(\begin{DoxyParamCaption}\item[{}]{Name,  }\item[{}]{Spelling }\end{DoxyParamCaption})~U\+O\+\_\+\#\#Name,}
+

@@ -1,12 +1,17 @@
+//===----------------------------------------------------------------------===//
+//  MIT License.
+//  Copyright (c) 2019 GRC Lab, CSE Dept., IIT Bombay, India
 //
-// Created by codeman on 19/6/19.
+//  Author: Anshuman Dhuliya [AD] (dhuliya@cse.iitb.ac.in)
 //
+//===----------------------------------------------------------------------===//
 
 #ifndef SPAN_INSTR_H
 #define SPAN_INSTR_H
 
 namespace span {
   namespace ir {
+    /// The instructions (three-address).
     namespace instr {
       class InstrT {
 
