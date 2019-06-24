@@ -20,21 +20,21 @@ namespace span {
       enum CastKind {
         #define CAST_OPERATION(Name) CK_##Name,
 
-        #include "opKinds.def"
+        #include "OpKinds.def"
       };
 
       /// All binary operators
       enum BinaryOperatorKind {
         #define BINARY_OPERATION(Name, Spelling) BO_##Name,
 
-        #include "opKinds.def"
+        #include "OpKinds.def"
       };
 
       /// All unary operators
       enum UnaryOperatorKind {
         #define UNARY_OPERATION(Name, Spelling) UO_##Name,
 
-        #include "opKinds.def"
+        #include "OpKinds.def"
       };
     } // end namespace op
   } // end namespace ir

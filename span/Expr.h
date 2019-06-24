@@ -9,7 +9,7 @@
 #ifndef SPAN_EXPR_H
 #define SPAN_EXPR_H
 
-#include "opKinds.h"
+#include "OpKinds.h"
 
 namespace span {
   namespace ir {

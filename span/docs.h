@@ -6,7 +6,7 @@
 //
 //===----------------------------------------------------------------------===//
 // A separate doxygen documentation header file.
-// It contain documentation that can not be anywhere else.
+// It contain documentation that cannot go anywhere else.
 //===----------------------------------------------------------------------===//
 
 

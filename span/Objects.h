@@ -12,15 +12,15 @@
 #include <unordered_map>
 #include <vector>
 
-#include "types.h"
-#include "opKinds.h"
-#include "instr.h"
-#include "expr.h"
+#include "Types.h"
+#include "OpKinds.h"
+#include "Instr.h"
+#include "Expr.h"
 
 namespace span {
   namespace ir {
     /// Objects in a translation unit
-    namespace obj {
+    namespace object {
       enum EdgeKind {
         FALSE_EDGE,
         TRUE_EDGE,
@@ -28,9 +28,13 @@ namespace span {
       };
 
       /// Edge from bb id to bb id (useful for serialization/deserialization)
-      typedef std::pair<BasicBlockId, std::pair<BasicBlockId, EdgeKind>> BBIdEdge;
+      using BBIdEdge = std::pair<BasicBlockId, std::pair<BasicBlockId, EdgeKind>>;
+
       /// Edge from CFGNode id to CFGNode id (useful for serialization/deserialization)
-      typedef std::pair<CFGNodeId , std::pair<CFGNodeId , EdgeKind>> CFGNodeIdEdge;
+      using CFGNodeIdEdge = std::pair<CFGNodeId , std::pair<CFGNodeId , EdgeKind>>;
+
+      using CFGNodeMap = std::unordered_map<CFGNodeId, CFGNode>;
+      using CFGNodeIdEdges = std::vector<CFGNodeIdEdge>;
 
       class BBEdge;
       class CFGNode;
@@ -70,30 +74,44 @@ namespace span {
 
       /// Control Flow Graph.
       class CFG {
+        CFG(CFGNodeMap cfgNodeMap,
+            CFGNodeIdEdges cfgEdges)
+            : cfgNodeMap{cfgNodeMap}, cfgEdges{cfgEdges} {
+        }
+
+      private:
+        // Node id -1 is the start node (always)
+        // Node id 0 is the end node (always)
+        CFGNodeMap cfgNodeMap;
+        CFGNodeIdEdges cfgEdges;
+        CFGNode *startNode;
+        CFGNode *endNode;
+
         // BB id -1 is the start node (always)
         // BB id 0 is the end node (always)
         std::unordered_map<BasicBlockId, BB> bbMap;
         std::vector<BBEdgeIdEdge> bbEdges;
         BB *startBB;
         BB *endBB;
-
-        // Node id -1 is the start node (always)
-        // Node id 0 is the end node (always)
-        std::unordered_map<CFGNodeId, CFGNode> cfgNodeMap;
-        std::vector<CFGNodeIdEdge> cfgEdges;
-        CFGNode *startNode;
-        CFGNode *endNode;
       };
 
       /// A function declaration/definition.
       class Function {
-        std::string name;
-        types::Function type;
-        std::vector<std::string> paramNames;
+      public:
+        Function(std::string name,
+            types::FunctionType type,
+            std::vector<std::string> paramNames,
+            CFG cfg, bool body): name{name}, type{type},
+            paramNames{paramNames}, cfg{cfg}, body{body} {
+        }
 
-        std::vector<instr::InstrT*> insns;
-        CFG cfg;
-        bool body;
+      private:
+        std::string name;
+        types::FunctionType type; /// Function's type signature
+        std::vector<std::string> paramNames;
+        CFG cfg; /// Control Flow Graph of the function.
+        bool body; /// true if function has a body
+        std::vector<instr::InstrT*> insns; /// Sequence of instructions.
       };
     } // end namespace obj
   } // end namespace ir
