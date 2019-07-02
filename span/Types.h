@@ -59,7 +59,7 @@ namespace span {
     } // end namespace types
   } // end namespace ir
 
-  using RecordField = std::pari<std::string, Type*>;
+  using RecordField = std::pair<std::string, Type*>;
   using RecordFields = std::vector<RecordField>;
   using ParamsTypes = std::vector<Type*>;
 
