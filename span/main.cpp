@@ -19,6 +19,12 @@ using namespace span::ir;
 
 /// Manually creates a translation unit
 tunit::TUnit* createTUnit1() {
+//int main(int argc, char **argv) {
+//  int x, y, z;
+//  z = x + y;
+//  return z;
+//}
+
   tunit::VarMap varMap;
   tunit::FuncMap funcMap;
   tunit::RecordMap recordMap;
@@ -58,12 +64,16 @@ tunit::TUnit* createTUnit1() {
                          expr::BinaryExpr{op::BO_Add,
                                           expr::VarExpr{"v:main:x"},
                                           expr::VarExpr{"v:main:y"}}}}},
+        {1, object::CFGNode{
+            instr::AssignI{expr::VarExpr{"v:main:y"},
+                           expr::VarExpr{"v:main:z"}}}},
         {0, object::CFGNode{
             instr::ReturnI{expr::VarExpr{"v:main:z"}}}}
       },
 
       object::CFGNodeIdEdges{
-          {-1, 0, object::EdgeKind::UNCOND_EDGE}
+          {-1, 1, object::EdgeKind::UNCOND_EDGE},
+          {1, 0, object::EdgeKind::UNCOND_EDGE}
       }
 
     }, // end CFG
