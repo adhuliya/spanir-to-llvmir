@@ -1,6 +1,6 @@
 syntax = "proto3";
 // Edited by Anshuman Dhuliya
-//   Original by: Aditya/Megha
+// Original by: Aditya/Megha
 
 //----------------------------------------------------------------------------//
 // This is a proto3 specification of the
@@ -97,10 +97,10 @@ enum BinaryOperatorKind {
 }	
 
 enum UnaryOperatorKind {
-  UO_Plus = 2;
-  UO_Minus = 3;
-  UO_Not = 4;
-  UO_LNot = 5;
+  UO_Plus = 0;
+  UO_Minus = 1;
+  UO_Not = 2;
+  UO_LNot = 3;
 }
 
 //----------------------------------------------------------------------------//
@@ -164,12 +164,12 @@ message BinaryExpr {
   string type = 1; // TheTypeName
 	BinaryOperatorKind opCode = 2;
 
-  oneof oprnd {
+  oneof oprnd1 {
     VarExpr varOprnd1 = 3;
     LitExpr litOprnd1 = 4;
   }
 
-  oneof oprnd {
+  oneof oprnd2 {
     VarExpr varOprnd2 = 5;
     LitExpr litOprnd2 = 6;
   }
@@ -195,13 +195,14 @@ message DerefExpr {
 
 message AddrOfExpr {
   string type = 1; // TheTypeName
+
   oneof oprnd {
     VarExpr varOprnd = 2;
     FuncExpr funcOprnd = 3;
     ArrayExpr arrayOprnd = 4;
     MemberExpr memberOprnd = 5;
   }
-  string oprnd = 3;	
+  
   Loc loc = 10;
 }
 
@@ -229,8 +230,8 @@ message AllocExpr {
 
 message CallExpr {
   string type = 1; // TheTypeName
-  string callee = 3;
-  repeated string args = 4;
+  string callee = 5;
+  repeated string args = 6;
   // Expressions that can occur in a function argument
   enum ArgExprKind {
     VAR_EXPR = 0;
@@ -449,7 +450,7 @@ message TranslationUnit {
   string description = 2; // a short description
   repeated Variable allVars = 3;
   repeated Function allFunctions = 4;
-  repeated Record allRecords = 5;
+  repeated RecordType allRecords = 5;
 }
 
 //----------------------------------------------------------------------------//
