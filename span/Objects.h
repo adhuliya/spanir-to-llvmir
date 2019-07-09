@@ -26,6 +26,10 @@ namespace span {
         TRUE_EDGE,
         UNCOND_EDGE,
       };
+    
+      class BBEdge;
+      class CFGNode;
+
 
       /// Edge from bb id to bb id (useful for serialization/deserialization)
       using BBIdEdge = std::pair<BasicBlockId, std::pair<BasicBlockId, EdgeKind>>;
@@ -36,13 +40,11 @@ namespace span {
       using CFGNodeMap = std::unordered_map<CFGNodeId, CFGNode>;
       using CFGNodeIdEdges = std::vector<CFGNodeIdEdge>;
 
-      class BBEdge;
-      class CFGNode;
-
+     
       /// A basic block containing a sequence of instructions.
       class BB {
         BasicBlockId id;
-        std::vector<InstrT*> insns;
+        std::vector<instr::InstrT*> insns;
         std::vector<BBEdge*> inEdges;
         std::vector<BBEdge*> outEdges;
 
@@ -60,7 +62,7 @@ namespace span {
 
       /// A CFG Node.
       class CFGNode {
-        InstrT *insn;
+        instr::InstrT *insn;
         std::vector<CFGNodeEdge*> inEdges;
         std::vector<CFGNodeEdge*> outEdges;
       };
@@ -90,7 +92,7 @@ namespace span {
         // BB id -1 is the start node (always)
         // BB id 0 is the end node (always)
         std::unordered_map<BasicBlockId, BB> bbMap;
-        std::vector<BBEdgeIdEdge> bbEdges;
+        std::vector<BBIdEdge> bbEdges;
         BB *startBB;
         BB *endBB;
       };
