@@ -19,9 +19,9 @@ namespace span {
   namespace ir {
     namespace tunit {
       /// The variables in a translation unit.
-      using VarMap = std::unordered_map<span::VarName, Type*>;
+      using VarMap = std::unordered_map<span::VarName, types::Type*>;
       /// The functions declared/defined in a translation unit.
-      using FuncMap = std::unordered_map<span::FunctionName, obj::Function>;
+      using FuncMap = std::unordered_map<span::FunctionName, object::Function>;
       /// The records defined in the translation unit.
       using RecordMap = std::unordered_map<span::RecordName, types::Record>;
 
@@ -38,7 +38,7 @@ namespace span {
         }
 
         /// Get TUnit name, generally the filename.
-        const std::string& getName() {return name};
+        const std::string& getName() {return name;}
         /// Set TUnit name, generally the filename.
         void setName(std::string name) {
           this->name = name;
@@ -64,4 +64,3 @@ namespace span {
 } // end namespace span
 
 #endif //SPAN_TUNIT_H
-
