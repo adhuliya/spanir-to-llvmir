@@ -8,25 +8,36 @@
 
 #ifndef SPAN_INSTR_H
 #define SPAN_INSTR_H
+#include "Expr.h"
+
 
 namespace span {
   namespace ir {
     /// The instructions (three-address).
     namespace instr {
       class InstrT {
-
+      public:
       };
 
       class AssignI : public InstrT {
-
+        expr::VarExpr *lhs;
+        expr::Expr *rhs;
+      public:
+         AssignI(expr::VarExpr *lhs,expr::VarExpr *rhs):lhs{lhs},rhs{rhs}{}
+         
+         
       };
 
       class CallI : public InstrT {
-
+      public:
+          
       };
 
       class ReturnI : public InstrT {
-
+        expr::Expr *inst;
+      public:
+         ReturnI(expr::Expr *inst):inst{inst}{}
+          
       };
 
     } // end namespace instr
