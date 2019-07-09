@@ -10,32 +10,69 @@
 #define SPAN_EXPR_H
 
 #include "OpKinds.h"
+#include "Types.h"
+
 
 namespace span {
   namespace ir {
     /// The expressions used in instructions.
     namespace expr {
       class Expr {
-        Type *type;
+        types::Type *type;
+      public:
+        Expr(types::Type *type): type{type}{} //constructor
+        void print(){type->print();}
+        types::Type* getType(){return type;}
+        types::BasicTypeKinds getTypeCode(){return type->getTypeCode();}
+        
+        
       };
 
       class UnitExpr : public Expr {
-
+      public:
+         UnitExpr(types::Type *type):Expr(type){} //constructor          
+          
       };
 
       class VarExpr : public UnitExpr {
         std::string name;
+      public:
+        VarExpr(std::string name,types::Type *type):name{name},UnitExpr(type){} // constructor
+        
+        
+      };
+
+      class LitExpr : public UnitExpr{ //incomplete
+         union val{
+                int i;
+                float f;
+               };
+         public: 
+        
+        
+
       };
 
       class BinaryExpr : public Expr {
-        BinaryOperatorKind opCode;
-        Expr *operand1;
-        Expr *operand2;
+        op::BinaryOperatorKind opCode;
+        UnitExpr *operand1;
+        UnitExpr *operand2;
+
+      public:
+        BinaryExpr(op::BinaryOperatorKind opCode, UnitExpr *operand1, UnitExpr *operand2):opCode{opCode},operand1{operand1},operand2{operand2},
+        Expr((operand1->getTypeCode()>operand2->getTypeCode())?operand1->getType():operand2->getType()){}
+            
+        
+
       };
 
       class UnaryExpr : public Expr {
-        UnaryOperatorKind opCode;
-        Expr *operand;
+        op::UnaryOperatorKind opCode;
+        UnitExpr *operand;
+
+      public:
+        UnaryExpr(op::UnaryOperatorKind opCode,UnitExpr *operand):opCode{opCode},operand{operand},Expr(operand->getType()){}  
+        
       };
 
     } // end namespace expr
