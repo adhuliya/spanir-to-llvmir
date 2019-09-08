@@ -12,13 +12,41 @@
 #include "OpKinds.h"
 #include "Types.h"
 
+#define BASICEXPR(name) EX_##name,
 
-namespace span {
-  namespace ir {
+
+namespace span 
+{
+  namespace ir 
+  {
     /// The expressions used in instructions.
-    namespace expr {
-      class Expr {
+    namespace expr 
+    {
+
+      enum BasicExprKinds 
+      {
+        BASICEXPR(VAR_EXPR)
+        BASICEXPR(LIT_EXPR)
+        BASICEXPR(FUNC_EXPR)
+        BASICEXPR(UNARY_EXPR)
+        BASICEXPR(CAST_EXPR)
+        BASICEXPR(BASIC_EXPR)
+        BASICEXPR(ADDROF_EXPR)
+        BASICEXPR(SIZEOF_EXPR)
+        BASICEXPR(BINARY_EXPR)
+        BASICEXPR(ARR_EXPR)
+        BASICEXPR(CALL_EXPR)
+        BASICEXPR(PTRCALL_EXPR)
+        BASICEXPR(MEMBER_EXPR)
+        BASICEXPR(PHI_EXPR)
+        BASICEXPR(SELECT_EXPR)
+        BASICEXPR(ALLOC_EXPR)
+      };
+
+      class Expr 
+      {
         types::Type *type;
+        
       public:
         Expr(types::Type *type): type{type}{} //constructor
         void print(){type->print();}
@@ -28,42 +56,42 @@ namespace span {
         
       };
 
-      class UnitExpr : public Expr {
+      class UnitExpr : public Expr 
+      {
       public:
-         UnitExpr(types::Type *type):Expr(type){} //constructor          
+          UnitExpr(types::Type *type):Expr(type){} //constructor          
           
-      };
+        };
 
-      class VarExpr : public UnitExpr {
-        std::string name;
-      public:
+        class VarExpr : public UnitExpr 
+        {
+          std::string name;
+        public:
         VarExpr(std::string name,types::Type *type):name{name},UnitExpr(type){} // constructor
         
         
       };
 
-      class LitExpr : public UnitExpr{ //incomplete
-         union val{
-                int i;
-                float f;
-               };
-         public: 
-        
-        
-
+      class LitExpr : public UnitExpr  //incomplete
+      { 
+        union val
+        {
+          int i;
+          float f;
+        };
+      public: 
       };
 
-      class BinaryExpr : public Expr {
+      class BinaryExpr : public Expr 
+      {
         op::BinaryOperatorKind opCode;
         UnitExpr *operand1;
         UnitExpr *operand2;
 
       public:
-        BinaryExpr(op::BinaryOperatorKind opCode, UnitExpr *operand1, UnitExpr *operand2):opCode{opCode},operand1{operand1},operand2{operand2},
-        Expr((operand1->getTypeCode()>operand2->getTypeCode())?operand1->getType():operand2->getType()){}
-            
+        BinaryExpr(op::BinaryOperatorKind opCode, UnitExpr *operand1, UnitExpr          *operand2):opCode{opCode},operand1{operand1},operand2{operand2},
+        Expr((operand1->getTypeCode()>operand2->getTypeCode())?operand1-           >getType():operand2->getType()){}
         
-
       };
 
       class UnaryExpr : public Expr {
@@ -75,8 +103,8 @@ namespace span {
         
       };
 
-    } // end namespace expr
-  } // end namespace ir
+        } // end namespace expr
+    } // end namespace ir
 } // end namespace span
 
 #endif //SPAN_EXPR_H
