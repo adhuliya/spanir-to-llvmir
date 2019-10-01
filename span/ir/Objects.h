@@ -36,9 +36,9 @@ namespace span {
 
       /// Edge from CFGNode id to CFGNode id (useful for serialization/deserialization)
       using CFGNodeIdEdge = std::pair<CFGNodeId , std::pair<CFGNodeId , EdgeKind>>;
+      using CFGNodeIdEdges = std::vector<CFGNodeIdEdge>;
 
       using CFGNodeMap = std::unordered_map<CFGNodeId, CFGNode>;
-      using CFGNodeIdEdges = std::vector<CFGNodeIdEdge>;
 
      
       /// A basic block containing a sequence of instructions.
@@ -65,6 +65,8 @@ namespace span {
         instr::InstrT *insn;
         std::vector<CFGNodeEdge*> inEdges;
         std::vector<CFGNodeEdge*> outEdges;
+        public:
+          CFGNode(instr::InstrT *insn={}, std::vector<CFGNodeEdge*> inEdges={}, std::vector<CFGNodeEdge*> outEdges = {}):insn{insn}, inEdges{inEdges}, outEdges{outEdges}{}
       };
 
       /// A labeled edge connecting CFG Nodes.
@@ -72,29 +74,28 @@ namespace span {
         CFGNode *from;
         CFGNode *to;
         EdgeKind edgeKind;
+        public:
+          CFGNodeEdge(CFGNode *from, CFGNode *to, EdgeKind edgeKind):from{from}, to{to}, edgeKind{edgeKind}{}
       };
 
       /// Control Flow Graph.
       class CFG {
-        CFG(CFGNodeMap cfgNodeMap,
-            CFGNodeIdEdges cfgEdges)
-            : cfgNodeMap{cfgNodeMap}, cfgEdges{cfgEdges} {
-        }
+        private:
+          // Node id -1 is the start node (always)
+          // Node id 0 is the end node (always)
+          CFGNodeMap cfgNodeMap;
+          CFGNodeIdEdges cfgEdges;
+          CFGNode *startNode;
+          CFGNode *endNode;
 
-      private:
-        // Node id -1 is the start node (always)
-        // Node id 0 is the end node (always)
-        CFGNodeMap cfgNodeMap;
-        CFGNodeIdEdges cfgEdges;
-        CFGNode *startNode;
-        CFGNode *endNode;
-
-        // BB id -1 is the start node (always)
-        // BB id 0 is the end node (always)
-        std::unordered_map<BasicBlockId, BB> bbMap;
-        std::vector<BBIdEdge> bbEdges;
-        BB *startBB;
-        BB *endBB;
+          // BB id -1 is the start node (always)
+          // BB id 0 is the end node (always)
+          std::unordered_map<BasicBlockId, BB> bbMap;
+          std::vector<BBIdEdge> bbEdges;
+          BB *startBB;
+          BB *endBB;
+        public:
+          CFG(CFGNodeMap cfgNodeMap, CFGNodeIdEdges cfgEdges) : cfgNodeMap{cfgNodeMap}, cfgEdges{cfgEdges} {}
       };
 
       /// A function declaration/definition.
@@ -103,9 +104,9 @@ namespace span {
         Function(std::string name,
             types::FunctionType type,
             std::vector<std::string> paramNames,
-            CFG cfg, bool body): name{name}, type{type},
-            paramNames{paramNames}, cfg{cfg}, body{body} {
-        }
+            CFG cfg, 
+            bool body): name{name}, type{type},
+            paramNames{paramNames}, cfg{cfg}, body{body} {}
 
       private:
         std::string name;
@@ -115,7 +116,7 @@ namespace span {
         bool body; /// true if function has a body
         std::vector<instr::InstrT*> insns; /// Sequence of instructions.
       };
-    } // end namespace obj
+    } // end namespace object
   } // end namespace ir
 } // end namespace span
 

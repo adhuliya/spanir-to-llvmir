@@ -92,11 +92,11 @@ namespace span {
 
 /// ******************************   OBJECTS    **************************************//// 
 
-    BinaryOp BO_ADD(ADD_OC); 
-    BinaryOp BO_SUB(SUB_OC); 
-    BinaryOp BO_MUL(MUL_OC); 
-    BinaryOp BO_DIV(DIV_OC); 
-    BinaryOp BO_MOD(MOD_OC);
+    BinaryOp BO_ADD(BO_ADD_OC); 
+    BinaryOp BO_SUB(BO_SUB_OC); 
+    BinaryOp BO_MUL(BO_MUL_OC); 
+    BinaryOp BO_DIV(BO_DIV_OC); 
+    BinaryOp BO_MOD(BO_MOD_OC);
 
     } // end namespace op
   } // end namespace ir

@@ -34,9 +34,9 @@ namespace span
   using EdgeLabel = std::string;
 
   // edge labels 
-  EdgeLabel FalseEdge = "FalseEdge"  // False edge 
-  EdgeLabel TrueEdge = "TrueEdge"  // True edge 
-  EdgeLabel UnCondEdge = "UnCondEdge"  // Unconditional edge 
+  EdgeLabel FalseEdge = "FalseEdge";  // False edge 
+  EdgeLabel TrueEdge = "TrueEdge";  // True edge 
+  EdgeLabel UnCondEdge = "UnCondEdge";  // Unconditional edge 
 
 // source location line:col given by user (only used to communicate back) 
 // this is a 64 bit integer
