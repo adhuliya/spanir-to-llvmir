@@ -2,11 +2,11 @@
 #include <vector>
 using namespace std;
 
-#include "/home/zubair/MTP-1/spanir-to-llvmir/span/ir/Types.h"
-#include "/home/zubair/MTP-1/spanir-to-llvmir/span/ir/Objects.h"
-#include "/home/zubair/MTP-1/spanir-to-llvmir/span/ir/TUnit.h"
-#include "/home/zubair/MTP-1/spanir-to-llvmir/span/ir/Expr.h"
-#include "/home/zubair/MTP-1/spanir-to-llvmir/span/ir/Instr.h"
+#include "/home/zubair/MTP-1/spanir-to-llvmir/span/ir/Types (copy).h"
+#include "/home/zubair/MTP-1/spanir-to-llvmir/span/ir/Objects (copy).h"
+#include "/home/zubair/MTP-1/spanir-to-llvmir/span/ir/TUnit (copy).h"
+#include "/home/zubair/MTP-1/spanir-to-llvmir/span/ir/Expr (copy).h"
+#include "/home/zubair/MTP-1/spanir-to-llvmir/span/ir/Instr (copy).h"
 using namespace span::ir;
 
 
@@ -41,12 +41,8 @@ int main()
   types::PointerType pt2(&tyu2, 2);
   object::CFGNodeEdge cfgned1();
   object::CFGNodeEdge cfgned2();
-
-  //std::vector<std::pair<int , std::pair<int , int>>> edges;
-  //edges.push_back(make_pair(-1, make_pair(0, 2)));
-
   object::CFGNodeIdEdges edges;
-  edges.push_back(make_pair(-1, make_pair(0, object::EdgeKind::FALSE_EDGE)));
+  edges.push_back(make_pair(-1, make_pair(0, object::EdgeKind::UNCOND_EDGE)));
 
   tunit::TUnit currTUnit(
     //name::

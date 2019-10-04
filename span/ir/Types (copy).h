@@ -34,9 +34,9 @@ namespace span
   using EdgeLabel = std::string;
 
   // edge labels 
-  EdgeLabel FalseEdge = "FalseEdge";  // False edge 
-  EdgeLabel TrueEdge = "TrueEdge";  // True edge 
-  EdgeLabel UnCondEdge = "UnCondEdge";  // Unconditional edge 
+  //EdgeLabel FalseEdge = "FalseEdge";  // False edge 
+  //EdgeLabel TrueEdge = "TrueEdge";  // True edge 
+  //EdgeLabel UnCondEdge = "UnCondEdge";  // Unconditional edge 
 
 // source location line:col given by user (only used to communicate back) 
 // this is a 64 bit integer
@@ -71,15 +71,11 @@ namespace span
       class Type 
       {
       public:
-        Type(BasicTypeKinds typeCode): typeCode{typeCode} {}
+        Type(BasicTypeKinds typeCode);
 
-        BasicTypeKinds getTypeCode() 
-        {
-          return typeCode;
-        }
-
+        BasicTypeKinds getTypeCode(); 
         
-        virtual void print() 
+        virtual void print()
         {
           std::string s="";
           if(typeCode == TY_VOID)
@@ -118,54 +114,37 @@ namespace span
             s = "UNION";
 
           std::cout << "BasicType: " << s;
-        }
-
-        bool isInteger()
-        {
-          return (typeCode>=TY_INT1 && typeCode<=TY_UINT64);
-        }
-
-        bool isUnsigned()
-        {
-          return (typeCode==TY_UINT8 ||typeCode==TY_UINT16 || typeCode==TY_UINT32 ||      typeCode==TY_UINT64);
-        }
-
-        bool isFloat(){
-          return (typeCode>=TY_FLOAT32 && typeCode<=TY_FLOAT128);
-        }
-
-        bool isNumeric(){
-          return (typeCode>=TY_INT1 && typeCode<=TY_FLOAT128);
         } 
+        
 
-        bool  isPointer(){
-          return (typeCode==TY_PTR);
-        }
+        bool isInteger();
 
-        bool isFunc(){
-          return (typeCode==TY_FUNCTION);
-        }
+        bool isUnsigned();
 
-        bool isStruct(){
-          return (typeCode==TY_STRUCT);
-        }
+        bool isFloat();
 
-        bool isVoid(){
-          return (typeCode==TY_VOID);
-        }
+        bool isNumeric();
 
-      /*bool operator==(Type &other) //incomplete
-      { 
-            if(typeCode==other.typeCode)
-              return true;
-            else 
-              return false;
-      }*/
+        bool  isPointer();
 
-      
+        bool isFunc();
 
-        private:
-          BasicTypeKinds typeCode;
+        bool isStruct();
+
+        bool isVoid();
+
+        /*bool operator==(Type &other) //incomplete
+        { 
+              if(typeCode==other.typeCode)
+                return true;
+              else 
+                return false;
+        }*/
+
+        
+
+      private:
+        BasicTypeKinds typeCode;
       };
     } // end namespace types
   } // end namespace ir
@@ -180,7 +159,7 @@ namespace span
 
       class PointerType : public Type {
       public:
-        PointerType(Type *to,std::int32_t indlev) : to{to}, indlev{indlev},Type(TY_PTR){}
+        PointerType(Type *to,std::int32_t indlev);
 
       private:
         Type *to;
@@ -190,29 +169,19 @@ namespace span
       class FunctionType : public Type {
       public:
         FunctionType(Type *returnType,
-          ParamTypes paramTypes, bool variadic) :
-        returnType{returnType}, paramTypes{paramTypes}, variadic{variadic},Type(TY_FUNCTION){
-        }
+          ParamTypes paramTypes, bool variadic);
 
-        const Type& getReturnType() {
-          return *returnType;
-        }
+        const Type& getReturnType();
 
-        void setReturnType(Type *returnType) {
-          // NOTE: make sure there is no memory leak
-          this->returnType=returnType;
-        }
+        void setReturnType(Type *returnType);
 
-        const ParamTypes& getParamTypes() {
-          return paramTypes;
-        }
+        const ParamTypes& getParamTypes();
 
-        bool isVariadic() {
-          return variadic;
-        }
+        bool isVariadic();
 
         /// Pretty print.
-        void print();
+        void print()
+        {}
 
       private:
         Type *returnType;
@@ -223,28 +192,25 @@ namespace span
       class Record : public Type {
       public:
         Record(bool isStruct, std::string name,
-          RecordFields fields): _isStruct{isStruct}, name{name}, fields{fields},Type(_isStruct?TY_STRUCT:TY_UNION){
-        }
+          RecordFields fields);
 
         /// True if the record is a struct.
-        bool isStruct() {return _isStruct;}
-
+        bool isStruct();
         /// True if the record is a union.
-        bool isUnion() {return !_isStruct;}
+        bool isUnion();
 
         /// Get the name of the record.
-        const std::string& getName() {return name;}
+        const std::string& getName();
 
-        void setName(std::string name) {
-          this->name = name;
-        }
+        void setName(std::string name);
 
-        RecordFields& getFields() {
-          return this->fields;
-        }
+
+        RecordFields& getFields();
+        
 
         /// Pretty print the record.
-        void print();
+        void print()
+        {}
 
       private:
         bool _isStruct; // false for union, true for struct
