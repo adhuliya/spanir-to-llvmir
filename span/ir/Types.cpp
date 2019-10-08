@@ -19,50 +19,6 @@ BasicTypeKinds Type::getTypeCode()
   return typeCode;
 }
 
-  
-// virtual void Type::print() 
-// {
-//   std::string s="";
-//   if(typeCode == TY_VOID)
-//     s = "VOID";
-//   else if(typeCode == TY_INT1)
-//     s = "INT1";
-//   else if(typeCode == TY_INT8)
-//     s = "INT8";
-//   else if(typeCode == TY_UINT8)
-//     s = "UINT8";
-//   else if(typeCode == TY_INT16)
-//     s = "INT16";
-//   else if(typeCode == TY_UINT16)
-//     s = "UINT16";
-//   else if(typeCode == TY_INT32)
-//     s = "INT32";
-//   else if(typeCode == TY_UINT32)
-//     s = "UINT32";
-//   else if(typeCode == TY_INT64)
-//     s = "INT64";
-//   else if(typeCode == TY_UINT64)
-//     s = "UINT64";
-//   else if(typeCode == TY_FLOAT32)
-//     s = "FLOAT32";
-//   else if(typeCode == TY_FLOAT64)
-//     s = "FLOAT64";
-//   else if(typeCode == TY_FLOAT128)
-//     s = "FLOAT128";
-//   else if(typeCode == TY_PTR)
-//     s = "PTR";
-//   else if(typeCode == TY_FUNCTION)
-//     s = "FUNCTION";
-//   else if(typeCode == TY_STRUCT)
-//     s = "STRUCT";
-//   else if(typeCode == TY_UNION)
-//     s = "UNION";
-
-//   std::cout << "BasicType: " << s;
-// }
-
-
-
 bool Type::isInteger()
 {
   return (typeCode>=TY_INT1 && typeCode<=TY_UINT64);

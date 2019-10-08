@@ -9,11 +9,13 @@
 #ifndef SPAN_TUNIT_H
 #define SPAN_TUNIT_H
 
+#include <bits/stdc++.h>
 #include "Types (copy).h"
 #include "Objects (copy).h"
 
 #include <unordered_map>
 #include <string>
+using namespace std;
 
 namespace span {
   namespace ir {
@@ -45,7 +47,7 @@ namespace span {
           void setDescription(std::string description);
 
           // checking
-          void show();
+          std::vector<string> Ret_String();
 
         private:
           std::string name;
@@ -54,6 +56,9 @@ namespace span {
           VarMap varMap;
           FuncMap funcMap;
           RecordMap recordMap;
+
+          std::vector<string> v;
+
       };
     } // end namespace tunit
   } // end namespace ir

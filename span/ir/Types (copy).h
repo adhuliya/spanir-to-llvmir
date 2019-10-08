@@ -9,6 +9,7 @@
 #include <vector>
 #include <iostream>
 #include <cstdint>
+using namespace std;
 #define BASICTYPE(name, description) TY_##name,
 
 namespace span 
@@ -33,6 +34,7 @@ namespace span
   using CFGNodeId = int32_t;
   using EdgeLabel = std::string;
 
+  using Ret_Str = std::string;
   // edge labels 
   //EdgeLabel FalseEdge = "FalseEdge";  // False edge 
   //EdgeLabel TrueEdge = "TrueEdge";  // True edge 
@@ -75,7 +77,7 @@ namespace span
 
         BasicTypeKinds getTypeCode(); 
         
-        virtual void print()
+        virtual string print()
         {
           std::string s="";
           if(typeCode == TY_VOID)
@@ -113,7 +115,8 @@ namespace span
           else if(typeCode == TY_UNION)
             s = "UNION";
 
-          std::cout << "BasicType: " << s;
+          //std::cout << "BasicType: " << s;
+          return s;
         } 
         
 
@@ -125,7 +128,7 @@ namespace span
 
         bool isNumeric();
 
-        bool  isPointer();
+        bool isPointer();
 
         bool isFunc();
 
@@ -161,6 +164,13 @@ namespace span
       public:
         PointerType(Type *to,std::int32_t indlev);
 
+        string print()
+        {
+          string s = "";
+          s += to->print() + " inclev= " + to_string(indlev) + " ";
+          return s;
+        }
+
       private:
         Type *to;
         std::int32_t indlev; /// indirection level
@@ -180,8 +190,21 @@ namespace span
         bool isVariadic();
 
         /// Pretty print.
-        void print()
-        {}
+        string print()
+        {
+          string s = "";
+          // if(returnType != NULL)
+          //   s += "NOT NULL\n";
+          // else
+          //   s += "NULL\n"; 
+          s += "ret_type = " + returnType->print() + " ";
+          for(auto x : paramTypes)
+          {
+            s += "paramtypes= " + x->print() + " ";
+          }
+          s += "isVariadic= " + to_string(variadic) + " ";
+          return s;
+        }
 
       private:
         Type *returnType;
@@ -209,8 +232,23 @@ namespace span
         
 
         /// Pretty print the record.
-        void print()
-        {}
+        string print()
+        {
+          Ret_Str s = "";
+          if(_isStruct)
+          {
+            s += "Struct ";
+          }
+          else
+            s += "Union ";
+
+          s += "name= " + name + " fields det= ";
+
+          for(auto x : fields)
+            s += x.first + " typ= " + x.second->print() + " "; 
+
+          return s;
+        }
 
       private:
         bool _isStruct; // false for union, true for struct

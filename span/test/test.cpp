@@ -80,32 +80,11 @@ int main()
     }
   );
 
-  /*
-  *************has to be update *****************
-    tunit::name = "f:main",
-    paramNames = ["v:main:argc", "v:main:argv"],
-    paramTypes = [types.Int, types.Ptr(types.Char, 2)],
-    returnType = types.Int,
-    basicBlocks = {
-      -1: [ // -1 is always start/entry BB. (REQUIRED)
-        instr.AssignI(expr.VarE("v:main:x", types.Loc(10,11)),
-                      expr.LitE(10, types.Loc( 10,11))),
-        instr.AssignI(expr.VarE("v:main:y", types.Loc(10,11)),
-                      expr.LitE(20, types.Loc(10,11))),
-        instr.AssignI(expr.VarE("v:main:z", types.Loc(10,11)),
-                      expr.VarE("v:main:y", types.Loc(10,11))),
-        instr.AssignI(expr.VarE("v:g", types.Loc(10,11)),
-                      expr.VarE("v:main:z", types.Loc(10,11))),
-      ],
-      0: [ // 0 is always end/exit block (REQUIRED)
-      ],
-    },
-    bbEdges = [
-      (-1, 0, types.UnCondEdge),
-    ],
-    loc = types.Loc(10,11),
-    
-  irTUnit.buildTUnit(currTUnit)
-  */
+  std::vector<string> v = currTUnit.Ret_String();
+  //cout<<currTUnit.Ret_String()<<endl;
+  for(auto x : v)
+  {
+    cout<<x<<endl;
+  }
   return 0;
 }

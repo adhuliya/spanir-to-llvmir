@@ -49,7 +49,11 @@ namespace span
         BasicExprKinds exprCode;
       public:
         Expr(types::Type *type,BasicExprKinds exprCode); //constructor
-        void print();
+        string print()
+        {
+          string s="";
+          return s;
+        }
         types::Type* getType();
         types::BasicTypeKinds getTypeCode();
         
@@ -58,17 +62,32 @@ namespace span
 
       class UnitExpr : public Expr 
       {
+        types::Type *type;
+        BasicExprKinds exprCode;
       public:
-        UnitExpr(types::Type *type, BasicExprKinds exprCode); //constructor          
+        UnitExpr(types::Type *type, BasicExprKinds exprCode); //constructor    
+        string print()
+        {
+          string s="";
+          s += type->print()+" ";  
+          return s;
+        }      
           
       };
 
       class VarExpr : public UnitExpr 
       {
         std::string name;
+        types::Type *type;
       public:
         VarExpr(std::string name,types::Type *type); // constructor
         
+        string print()
+        {
+          string s="";
+          s += name + " " + type->print()+" ";  
+          return s;
+        }
       };
 
       class LitExpr : public UnitExpr  //incomplete

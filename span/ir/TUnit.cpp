@@ -5,7 +5,7 @@
 //  Author: Anshuman Dhuliya [AD] (dhuliya@cse.iitb.ac.in)
 //
 //===----------------------------------------------------------------------===//
-
+#include <bits/stdc++.h>
 #include "Types (copy).h"
 #include "Objects (copy).h"
 #include "TUnit (copy).h"
@@ -13,6 +13,7 @@
 using namespace std;
 using namespace span::ir::tunit;
 using namespace span;
+using namespace span::ir;
 
 
 TUnit::TUnit(std::string name, std::string description,
@@ -35,11 +36,38 @@ void TUnit::setName(std::string name)
 }
 
 
+/// Get TUnit (optional) description
+std::string TUnit::getDescription()
+{
+  return description;
+}
+
+/// Set TUnit (optional) description
 /// \param description an optional description of the translation unit
+void TUnit::setDescription(std::string description)
+{
+  this->description = description;
+}
 
 // checking
-void TUnit::show()
+std::vector<string> TUnit::Ret_String()
 {
-  std::cout<<"hello hello from TUnit\n";
+  v.push_back(getName());
+  v.push_back(getDescription());
+  v.push_back("*** program vars (START)***");
+  for(auto x : varMap)
+  {
+    v.push_back(x.first + "  typecode is = " + (x.second->print()));
+
+  } 
+  v.push_back("*** program vars (END)***");
+
+  v.push_back("*** funcion description (START)***");
+  for(auto x : funcMap)
+  {
+    v.push_back(x.first + " :: " + x.second.print());
+  } 
+  v.push_back("*** funcion description (END)***");
+  return v;
 }
 

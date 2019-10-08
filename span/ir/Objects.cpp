@@ -25,9 +25,14 @@ CFG::CFG(CFGNodeMap cfgNodeMap, CFGNodeIdEdges cfgEdges) : cfgNodeMap{cfgNodeMap
       
 /// A function declaration/definition.
 Function::Function(std::string name,
-  types::FunctionType type,
+  types::FunctionType f_type,
   std::vector<std::string> paramNames,
   CFG cfg, 
-  bool body): name{name}, type{type},
+  bool body): name{name}, f_type{f_type},
   paramNames{paramNames}, cfg{cfg}, body{body} {}
+
+std::string Function::getName()
+{
+  return name;
+}
 

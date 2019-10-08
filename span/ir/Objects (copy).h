@@ -67,6 +67,17 @@ namespace span {
         std::vector<CFGNodeEdge*> outEdges;
         public:
           CFGNode(instr::InstrT *insn={}, std::vector<CFGNodeEdge*> inEdges={}, std::vector<CFGNodeEdge*> outEdges = {});
+
+          string print()
+          {
+            string s="";
+            if(insn != NULL)
+              s += insn->print()+ " ";
+            else
+              s += "EMTPY BLOCK\n";
+            //s += insn->print()+ " ";
+            return s;
+          }
         };
 
       /// A labeled edge connecting CFG Nodes.
@@ -96,21 +107,47 @@ namespace span {
           BB *endBB;
         public:
           CFG(CFGNodeMap cfgNodeMap, CFGNodeIdEdges cfgEdges);
+
+          string print()
+          {
+            string s="";
+            s += "\nCFG nodes(STRT)\n";
+            for(auto x:cfgNodeMap)
+              s += "id= "+to_string(x.first) + " " + x.second.print()+" ";
+            s += "\nCFG nodes(END)\n";
+            return s;
+          }
       };
 
       /// A function declaration/definition.
       class Function {
       public:
         Function(std::string name,
-            types::FunctionType type,
+            types::FunctionType f_type,
             std::vector<std::string> paramNames,
-            // #################################3    Commented this line
             CFG cfg,                        
             bool body);
 
+        std::string getName();
+
+        string print()
+        {
+          string s = "";
+          s += "f:name = " + name + " details = " + f_type.print() + " \n";
+          for(auto x: paramNames)
+          {
+            s += x + " ";
+          }
+          s += cfg.print() + " " + " isbody= " + to_string(body);
+
+
+          return s;
+        }
+        
+
       private:
         std::string name;
-        types::FunctionType type; /// Function's type signature
+        types::FunctionType f_type; /// Function's type signature
         std::vector<std::string> paramNames;
         CFG cfg; /// Control Flow Graph of the function.
         bool body; /// true if function has a body

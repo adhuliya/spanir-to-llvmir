@@ -34,10 +34,18 @@ namespace span {
         BASICINSTR(GOTO_INSTR)
       };
 
-      class InstrT {
+      class InstrT 
+      {
         BasicInstrKinds InstrCode;
       public:
         InstrT(BasicInstrKinds InstrCode);
+
+        string print()
+        {
+          string s="";
+          s += to_string(InstrCode) + " tttt ";  
+          return s;
+        }
       };
 
       class AssignI : public InstrT {
@@ -45,6 +53,13 @@ namespace span {
         expr::Expr *rhs;
       public:
          AssignI(expr::VarExpr *lhs,expr::Expr *rhs);
+
+         string print()
+         {
+            string s="";
+            s += lhs->print() + " " + rhs->print()+" ";  
+            return s;
+         }
       };
 
       class CallI : public InstrT {
@@ -55,6 +70,13 @@ namespace span {
         expr::Expr *inst;
       public:
          ReturnI(expr::Expr *inst);
+
+         string print()
+         {
+            string s="";
+            s += inst->print() + " ";  
+            return s;
+         }
       };
 
     } // end namespace instr

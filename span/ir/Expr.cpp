@@ -17,11 +17,6 @@ using namespace span;
 Expr::Expr(types::Type *type,BasicExprKinds exprCode): type{type}, exprCode{exprCode} //constructor
 {}
 
-void Expr::print()
-{
-  type->print();
-}
-
 ir::types::Type* Expr::getType()
 {
   return type;
