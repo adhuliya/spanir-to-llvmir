@@ -58,7 +58,7 @@ namespace span {
 
         string print()
         {
-          string s="";
+          string s="AssignI:";
           s += "lhs:: " + lhs->print() + " ::  rhs:: " + rhs->print()+" ::";   
           return s;
         }
@@ -71,7 +71,7 @@ namespace span {
 
           string print()
           {
-            string s="";
+            string s="CallI: ";
             s += inst->print() + " ";
             return s;
           }        
@@ -84,7 +84,7 @@ namespace span {
 
          string print()
          {
-            string s="";
+            string s="ReturnI: ";
             s += inst->print() + " ";  
             return s;
          }
@@ -93,35 +93,18 @@ namespace span {
       class CondI : public InstrT {
           //  A conditional instruction.  //
         expr::Expr *inst; 
-        //LabelName trueLabel = "None";
-        //LabelName falseLabel = "None";
-        //EdgeKind falseLabel;
-        //EdgeKind trueLabel;
-
+        
         public :
           CondI(expr::Expr *inst); 
 
           string print()
           {
-            string s="";
+            string s="CondI: ";
             s += inst->print() + " ";  
             return s;
           } 
       };
     
-  /*
-  """"""
-  def __init__(self,
-               arg: expr.UnitET,
-               trueLabel: types.LabelNameT = None,
-               falseLabel: types.LabelNameT = None,
-               loc: Optional[types.Loc] = None
-  ) -> None:
-    super().__init__(COND_INSTR_IC, loc)
-    self.arg = arg
-    self.trueLabel = trueLabel
-    self.falseLabel = falseLabel
-  */
     } // end namespace instr
   } // end namespace ir
 } // end namespace span
