@@ -13,8 +13,6 @@
 #include "Types (copy).h"
 #include "Objects (copy).h"
 
-#include <unordered_map>
-#include <string>
 using namespace std;
 
 namespace span {
@@ -47,7 +45,7 @@ namespace span {
           void setDescription(std::string description);
 
           // checking
-          std::vector<string> Ret_String();
+          vector<string> Ret_String();
 
         private:
           std::string name;

@@ -21,7 +21,9 @@ TUnit::TUnit(std::string name, std::string description,
   name{name}, description{description},
   varMap{varMap}, funcMap{funcMap}
   //recordMap{recordMap} 
-  {}
+  {
+    //types::MyMap mymap();
+  }
 
 /// Get TUnit name, generally the filename.
 const std::string& TUnit::getName() 
@@ -50,10 +52,13 @@ void TUnit::setDescription(std::string description)
 }
 
 // checking
-std::vector<string> TUnit::Ret_String()
+vector<string> TUnit::Ret_String()
 {
+  v.push_back("***      First Argument::test Case name:-    ***");
   v.push_back(getName());
+  v.push_back("***      Second Argument::Input Prigram Desc:-     ***");
   v.push_back(getDescription());
+  v.push_back("***      Third Argument::All Vars:-         ***");
   v.push_back("*** program vars (START)***");
   for(auto x : varMap)
   {
@@ -62,6 +67,7 @@ std::vector<string> TUnit::Ret_String()
   } 
   v.push_back("*** program vars (END)***");
 
+  v.push_back("***      Fourth Argument::All Func Desc:-      ***");
   v.push_back("*** funcion description (START)***");
   for(auto x : funcMap)
   {

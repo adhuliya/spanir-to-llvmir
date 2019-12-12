@@ -16,8 +16,11 @@ using namespace span;
 InstrT::InstrT(BasicInstrKinds InstrCode) : InstrCode{InstrCode}{}
 
 AssignI::AssignI(expr::VarExpr *lhs,expr::Expr *rhs):lhs{lhs},rhs{rhs}, InstrT(INS_ASSIGN_INSTR){}
- 
+
+CallI::CallI(expr::Expr *inst):inst{inst}, InstrT(INS_CALL_INSTR){}
 
 ReturnI::ReturnI(expr::Expr *inst):inst{inst}, InstrT(INS_RETURN_INSTR){}
+
+CondI::CondI(expr::Expr *inst):inst{inst}, InstrT(INS_COND_INSTR){}
           
       

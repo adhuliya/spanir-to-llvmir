@@ -16,6 +16,7 @@
 #include "OpKinds (copy).h"
 #include "Instr (copy).h"
 #include "Expr (copy).h"
+using namespace span::ir::types;
 
 namespace span {
   namespace ir {
@@ -74,8 +75,7 @@ namespace span {
             if(insn != NULL)
               s += insn->print()+ " ";
             else
-              s += "EMTPY BLOCK\n";
-            //s += insn->print()+ " ";
+              s += "EMTPY BLOCK";
             return s;
           }
         };
@@ -102,6 +102,7 @@ namespace span {
           // BB id -1 is the start node (always)
           // BB id 0 is the end node (always)
           std::unordered_map<BasicBlockId, BB> bbMap;
+          std::unordered_map<int, string> edge_record;
           std::vector<BBIdEdge> bbEdges;
           BB *startBB;
           BB *endBB;
@@ -113,8 +114,16 @@ namespace span {
             string s="";
             s += "\nCFG nodes(STRT)\n";
             for(auto x:cfgNodeMap)
-              s += "id= "+to_string(x.first) + " " + x.second.print()+" ";
+              s += "Node id= "+ to_string(x.first) + "   Instr( " + x.second.print()+" )\n";
             s += "\nCFG nodes(END)\n";
+
+            s += "\nCFG node edges(STRT)\n";
+            for(auto x:cfgEdges)
+            {
+              s += "From (Node id)= "+ to_string(x.first) + "  To (Node id)= " + to_string(x.second.first) + " Edge Type= " + to_string(x.second.second) + "  ";
+            }
+
+            s += "\nCFG node edges(END)\n";
             return s;
           }
       };
@@ -129,14 +138,17 @@ namespace span {
             bool body);
 
         std::string getName();
-
+        long long ll = 1;
         string print()
         {
           string s = "";
-          s += "f:name = " + name + " details = " + f_type.print() + " \n";
+          s += "func name = " + name + " func details: " + f_type.print() + " \n";
+
+          s += "param names:-   ";
           for(auto x: paramNames)
           {
-            s += x + " ";
+            s += to_string(ll) + ". " + x + "     ";
+            ll++;
           }
           s += cfg.print() + " " + " isbody= " + to_string(body);
 

@@ -49,7 +49,7 @@ namespace span
         BasicExprKinds exprCode;
       public:
         Expr(types::Type *type,BasicExprKinds exprCode); //constructor
-        string print()
+        virtual string print()
         {
           string s="";
           return s;
@@ -62,14 +62,15 @@ namespace span
 
       class UnitExpr : public Expr 
       {
+        //string name;
         types::Type *type;
         BasicExprKinds exprCode;
       public:
         UnitExpr(types::Type *type, BasicExprKinds exprCode); //constructor    
-        string print()
+        virtual string print()
         {
           string s="";
-          s += type->print()+" ";  
+          s += "type-" + type->print()+" ";
           return s;
         }      
           
@@ -85,20 +86,33 @@ namespace span
         string print()
         {
           string s="";
-          s += name + " " + type->print()+" ";  
+          s += "name-" + name + " type-" + type->print()+" ";
           return s;
         }
       };
 
       class LitExpr : public UnitExpr  //incomplete
-      { 
+      {
+        types::Type *type;
         union val
         {
           int i;
           float f;
-        };
-        //LitExpr(float val,types::Type *type):val{val,val},UnitExpr(type){}
+        }v;
+        public:
+          LitExpr(float val,types::Type *type);
 
+          string print()
+          {
+            string s="";
+            //s += "valint=" + to_string(v.i) + "  valfloat=" + to_string(v.f) + 
+            if(type->isInteger())
+              s += "val_int=" + to_string(v.i) + "  ";
+            else
+              s += "val_float=" + to_string(v.f) + "  ";
+            s += "type-" + type->print()+" ";
+            return s;
+          }
       };
 
       class BinaryExpr : public Expr 
@@ -107,17 +121,30 @@ namespace span
         UnitExpr *operand1;
         UnitExpr *operand2;
       public:
-        BinaryExpr(op::BinaryOperatorKind opCode, UnitExpr *operand1, UnitExpr *operand2);
+        BinaryExpr(UnitExpr *operand1, op::BinaryOperatorKind opCode, UnitExpr *operand2);
+        string print()
+        {
+          string s="";
+          s += "op1-" + operand1->print() + " operator-" + to_string(opCode) + " op2-" + operand2->print();
+          return s;
+        }
       };
 
-      class UnaryExpr : public Expr {
+      class UnaryExpr : public UnitExpr {
       public:
+        std::string name;
         op::UnaryOperatorKind opCode;
         UnitExpr *operand;
 
       public:
-        UnaryExpr(op::UnaryOperatorKind opCode,UnitExpr *operand);  
+        UnaryExpr(std::string name, op::UnaryOperatorKind opCode, UnitExpr *operand);  
         
+        string print()
+        {
+          string s="";
+          s += "name-" + name +" Unary_opcode-" + to_string(opCode) + " operand-" + operand->print();
+          return s;
+        }
       };
 
     } // end namespace expr

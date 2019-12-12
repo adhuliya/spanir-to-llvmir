@@ -5,6 +5,7 @@
 #ifndef SPAN_TYPES_H
 #define SPAN_TYPES_H
 
+#include <bits/stdc++.h>
 #include <string>
 #include <vector>
 #include <iostream>
@@ -35,10 +36,11 @@ namespace span
   using EdgeLabel = std::string;
 
   using Ret_Str = std::string;
+
   // edge labels 
-  //EdgeLabel FalseEdge = "FalseEdge";  // False edge 
-  //EdgeLabel TrueEdge = "TrueEdge";  // True edge 
-  //EdgeLabel UnCondEdge = "UnCondEdge";  // Unconditional edge 
+  // EdgeLabel FalseEdge = "None";  // False edge 
+  // EdgeLabel TrueEdge = "None";  // True edge 
+  // EdgeLabel UnCondEdge = "UnCondEdge";  // Unconditional edge 
 
 // source location line:col given by user (only used to communicate back) 
 // this is a 64 bit integer
@@ -144,11 +146,16 @@ namespace span
                 return false;
         }*/
 
-        
-
       private:
         BasicTypeKinds typeCode;
       };
+
+      // class MyMap{
+      //   public:
+      //     unordered_map <int, string> edge_record;
+      //     MyMap();
+      //     unordered_map <int, string> Initialise_Map();
+      // };
     } // end namespace types
   } // end namespace ir
 
@@ -167,7 +174,7 @@ namespace span
         string print()
         {
           string s = "";
-          s += to->print() + " inclev= " + to_string(indlev) + " ";
+          s += to->print() + " indlev= " + to_string(indlev) + " ";
           return s;
         }
 
@@ -188,19 +195,17 @@ namespace span
         const ParamTypes& getParamTypes();
 
         bool isVariadic();
+        long long ll = 1;
 
         /// Pretty print.
         string print()
         {
           string s = "";
-          // if(returnType != NULL)
-          //   s += "NOT NULL\n";
-          // else
-          //   s += "NULL\n"; 
           s += "ret_type = " + returnType->print() + " ";
           for(auto x : paramTypes)
           {
-            s += "paramtypes= " + x->print() + " ";
+            s += "paramtypes" + to_string(ll) + "= " + x->print() + " ";
+            ll++;
           }
           s += "isVariadic= " + to_string(variadic) + " ";
           return s;

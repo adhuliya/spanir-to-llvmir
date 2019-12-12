@@ -61,7 +61,12 @@ bool Type::isVoid(){
         return false;
 }*/
 
-
+// MyMap::MyMap(){}
+// unordered_map <int, string> MyMap::Initialise_Map(){
+//   edge_record.insert({0,"False Edge"});
+//   edge_record.insert({1,"True Edge"});
+//   edge_record.insert({2,"Uncond Edge"});
+// }
 
 
   

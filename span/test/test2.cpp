@@ -7,6 +7,12 @@ using namespace std;
 #include "/home/zubair/Desktop/spanir-to-llvmir-mtp-1/span/ir/TUnit (copy).h"
 #include "/home/zubair/Desktop/spanir-to-llvmir-mtp-1/span/ir/Expr (copy).h"
 #include "/home/zubair/Desktop/spanir-to-llvmir-mtp-1/span/ir/Instr (copy).h"
+
+// #include "/home/akshay/Desktop/spanir-to-llvmir-mtp-1/span/ir/Types (copy).h"
+// #include "/home/akshay/Desktop/spanir-to-llvmir-mtp-1/span/ir/Objects (copy).h"
+// #include "/home/akshay/Desktop/spanir-to-llvmir-mtp-1/span/ir/TUnit (copy).h"
+// #include "/home/akshay/Desktop/spanir-to-llvmir-mtp-1/span/ir/Expr (copy).h"
+// #include "/home/akshay/Desktop/spanir-to-llvmir-mtp-1/span/ir/Instr (copy).h"
 using namespace span::ir;
 
 
@@ -30,6 +36,7 @@ int main()
   types::Type tyu_temp1(types::TY_UINT8);        // used as temp for argv
   types::PointerType ty_argv(&tyu_temp1, 2);     // used for parametetr of main(argc, argv) globally
   types::Type ty_var1(types::TY_INT32);     // used for local variable x of main
+  types::Type ty_var2(types::TY_INT32);     // used for local variable y of main
   types::Type ty_return(types::TY_INT32);   // used for return type of main
   types::Type ty_expr1_1(types::TY_INT32);  // used for x in expr 'x+y'
   types::Type ty_expr1_2(types::TY_INT32);  // used for y in expr 'x+y'
@@ -56,7 +63,8 @@ int main()
       // all global and local variables go here
       {"v:main:argc", &ty_argc} ,
       {"v:main:argv", &ty_argv} ,
-      {"v:main:x", &ty_var1}
+      {"v:main:x", &ty_var1},
+      {"v:main:y", &ty_var2}
       //make_pair("v:main:c":    types.Int),
       //make_pair("v:main:z":    types.Int),  
     }, // end allVars
@@ -86,7 +94,7 @@ int main()
   );
 
   std::vector<string> v = currTUnit.Ret_String();
-  //cout<<currTUnit.Ret_String()<<endl;
+  
   for(auto x : v)
   {
     cout<<x<<endl;

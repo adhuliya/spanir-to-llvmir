@@ -10,7 +10,10 @@
 #define SPAN_INSTR_H
 #include "Expr (copy).h"
 #include "Types (copy).h"
+using namespace span;
+//using namespace span::ir::object;
 #define BASICINSTR(name) INS_##name,
+
 
 
 namespace span {
@@ -40,10 +43,9 @@ namespace span {
       public:
         InstrT(BasicInstrKinds InstrCode);
 
-        string print()
+        virtual string print()
         {
-          string s="";
-          s += to_string(InstrCode) + " tttt ";  
+          string s="";  
           return s;
         }
       };
@@ -52,18 +54,27 @@ namespace span {
         expr::VarExpr *lhs;
         expr::Expr *rhs;
       public:
-         AssignI(expr::VarExpr *lhs,expr::Expr *rhs);
+        AssignI(expr::VarExpr *lhs,expr::Expr *rhs);
 
-         string print()
-         {
-            string s="";
-            s += lhs->print() + " " + rhs->print()+" ";  
-            return s;
-         }
+        string print()
+        {
+          string s="";
+          s += "lhs:: " + lhs->print() + " ::  rhs:: " + rhs->print()+" ::";   
+          return s;
+        }
       };
 
       class CallI : public InstrT {
-      public:
+        expr::Expr *inst;
+        public:
+          CallI(expr::Expr *inst);
+
+          string print()
+          {
+            string s="";
+            s += inst->print() + " ";
+            return s;
+          }        
       };
 
       class ReturnI : public InstrT {
@@ -79,6 +90,38 @@ namespace span {
          }
       };
 
+      class CondI : public InstrT {
+          //  A conditional instruction.  //
+        expr::Expr *inst; 
+        //LabelName trueLabel = "None";
+        //LabelName falseLabel = "None";
+        //EdgeKind falseLabel;
+        //EdgeKind trueLabel;
+
+        public :
+          CondI(expr::Expr *inst); 
+
+          string print()
+          {
+            string s="";
+            s += inst->print() + " ";  
+            return s;
+          } 
+      };
+    
+  /*
+  """"""
+  def __init__(self,
+               arg: expr.UnitET,
+               trueLabel: types.LabelNameT = None,
+               falseLabel: types.LabelNameT = None,
+               loc: Optional[types.Loc] = None
+  ) -> None:
+    super().__init__(COND_INSTR_IC, loc)
+    self.arg = arg
+    self.trueLabel = trueLabel
+    self.falseLabel = falseLabel
+  */
     } // end namespace instr
   } // end namespace ir
 } // end namespace span

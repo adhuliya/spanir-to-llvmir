@@ -27,15 +27,22 @@ ir::types::BasicTypeKinds Expr::getTypeCode()
   return type->getTypeCode();
 }
 
-UnitExpr::UnitExpr(types::Type *type, BasicExprKinds exprCode):Expr(type, exprCode)
+UnitExpr::UnitExpr(types::Type *type, BasicExprKinds exprCode):type{type},exprCode{exprCode},Expr(type, exprCode)
 {} //constructor          
 
-VarExpr::VarExpr(std::string name,types::Type *type):name{name},UnitExpr(type, EX_VAR_EXPR)
+VarExpr::VarExpr(std::string name,types::Type *type):name{name}, type{type},UnitExpr(type, EX_VAR_EXPR)
 {} // constructor
 
-BinaryExpr::BinaryExpr(op::BinaryOperatorKind opCode, UnitExpr *operand1, UnitExpr *operand2):opCode{opCode},operand1{operand1},operand2{operand2},
+LitExpr::LitExpr(float val, types::Type *type):type{type}, UnitExpr(type, EX_LIT_EXPR){
+	if(type->isInteger())
+		v.i = val;
+	else
+		v.f = val;
+} //constructor
+
+BinaryExpr::BinaryExpr(UnitExpr *operand1, op::BinaryOperatorKind opCode, UnitExpr *operand2):operand1{operand1},opCode{opCode},operand2{operand2},
 Expr((operand1->getTypeCode() > operand2->getTypeCode())?operand1->getType():operand2->getType(), EX_BINARY_EXPR)
 {}
 
-UnaryExpr::UnaryExpr(op::UnaryOperatorKind opCode,UnitExpr *operand):opCode{opCode},operand{operand},Expr(operand->getType(), EX_UNARY_EXPR)
+UnaryExpr::UnaryExpr(std::string name, op::UnaryOperatorKind opCode,UnitExpr *operand):name{name}, opCode{opCode},operand{operand},UnitExpr(operand->getType(), EX_UNARY_EXPR)
 {}          

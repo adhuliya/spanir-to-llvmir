@@ -48,28 +48,28 @@ namespace span {
        UNARY_OPERATION(BIT_NOT_OC, 110)
        UNARY_OPERATION(LNOT_OC, 120)
        UNARY_OPERATION(CAST_OC, 130)
-     };
+      };
 
-     class BinaryOp
-     {
-     public:
-      BinaryOp(BinaryOperatorKind opCode);
+      class BinaryOp
+      {
+        public:
+          BinaryOp(BinaryOperatorKind opCode);
 
-      BinaryOperatorKind getOpCode();
-
-
-
-      bool isBinaryOp();
+          BinaryOperatorKind getOpCode();
 
 
-      virtual void print();
+
+          bool isBinaryOp();
 
 
-  //BinaryOp operator = (Complex const &obj)
+          virtual void print();
 
-    private:
-      BinaryOperatorKind opCode;  
-    }; 
+
+      //BinaryOp operator = (Complex const &obj)
+
+        private:
+          BinaryOperatorKind opCode;  
+      }; 
     
     } // end namespace op
   } // end namespace ir

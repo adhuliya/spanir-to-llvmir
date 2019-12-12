@@ -21,7 +21,10 @@ CFGNode::CFGNode(instr::InstrT *insn, std::vector<CFGNodeEdge*> inEdges, std::ve
 CFGNodeEdge::CFGNodeEdge(CFGNode *from, CFGNode *to, EdgeKind edgeKind):from{from}, to{to}, edgeKind{edgeKind}{}
 
 /// Control Flow Graph.
-CFG::CFG(CFGNodeMap cfgNodeMap, CFGNodeIdEdges cfgEdges) : cfgNodeMap{cfgNodeMap}, cfgEdges{cfgEdges} {}
+CFG::CFG(CFGNodeMap cfgNodeMap, CFGNodeIdEdges cfgEdges) : cfgNodeMap{cfgNodeMap}, cfgEdges{cfgEdges} {
+	//types::MyMap mymap;
+	//edge_record = mymap.Initialise_Map();
+}
       
 /// A function declaration/definition.
 Function::Function(std::string name,
