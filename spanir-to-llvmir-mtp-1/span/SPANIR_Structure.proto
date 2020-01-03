@@ -1,0 +1,590 @@
+syntax = "proto3";
+
+package SPILL;
+
+enum BasicTypeKinds {
+		VOID = 0;
+		INT1 = 1;
+		INT8 = 2;
+		INT16 = 3;
+		INT32 = 4;
+		INT64 = 5;
+		INT128 = 6;
+		UINT8 = 7;
+		UINT16 = 8;
+		UINT32 = 9;
+		UINT64 = 10;
+		UINT128 = 11;
+		FLOAT16 = 12;
+		FLOAT32 = 13;
+		FLOAT64 = 14;
+		FLOAT80 = 15;
+		FLOAT128 = 16;
+		PTR = 17;
+		ARR = 18;
+		CONST_ARR = 19;
+		VAR_ARR = 20;
+		INCPL_ARR = 21;
+		FUNC = 22;
+		FUNC_SIG = 23;
+		STRUCT = 24;
+		UNION = 25;
+}
+
+message Type {
+	BasicTypeKinds typeCode = 1;
+}
+
+message Loc {
+	int32 line = 1;
+	int32 col = 2;
+}
+
+message ParamType {
+	string ptrToType = 1;
+}
+
+message PointerType {
+	BasicTypeKinds typeCode = 1; 
+	string to = 2;	//Pointer to Type
+	int32 indlevel = 3;
+}
+
+message ArrayT {
+	BasicTypeKinds typeCode = 1;   
+	string of = 2;	//Pointer to Type
+}
+
+message ConstSizeArray {
+	BasicTypeKinds typeCode = 1;   
+	string of = 2;	//Pointer to Type
+	repeated int32 size = 3;
+}
+
+message VarArray {
+	BasicTypeKinds typeCode = 1;   
+	string of = 2;	//Pointer to Type
+}
+
+message IncompleteArray {
+	BasicTypeKinds typeCode = 1;   
+	string of = 2;	//Pointer to Type
+}
+
+message FunctionType {
+		BasicTypeKinds typeCode = 1;
+		string returnType = 2;
+		repeated ParamType paramTypes = 3;
+		bool variadic = 4;
+}
+
+message RecordField {
+	string name = 1;
+	string ptrToType = 2;
+}
+
+message RecordFields {
+	repeated RecordField recordFields = 1;
+}
+
+message Record {
+	BasicTypeKinds typeCode = 1;
+	bool _isStruct = 2; 
+	string name = 3;
+	RecordFields fields = 4;
+}
+
+/*Cast Operations*/
+enum CastKind {
+	Dependent = 0;
+	BitCast = 1;
+	LValueBitCast = 2;
+	LValueToRValue = 3;
+	NoOp = 4;
+	BaseToDerived = 5;
+	DerivedToBase = 6;
+	UncheckedDerivedToBase = 7;
+	Dynamic = 8;
+	ToUnion = 9;
+	ArrayToPointerDecay = 10;
+	FunctionToPointerDecay = 11;
+	NullToPointer = 12;
+	NullToMemberPointer = 13;
+	BaseToDerivedMemberPointer = 14;
+	DerivedToBaseMemberPointer = 15;
+	MemberPointerToBoolean = 16;
+	ReinterpretMemberPointer = 17;
+	UserDefinedConversion = 18;
+	ConstructorConversion = 19;
+	IntegralToPointer = 20;
+	PointerToIntegral = 21;
+	PointerToBoolean = 22;
+	ToVoid = 23;
+	VectorSplat = 24;
+	IntegralCast = 25;
+	IntegralToBoolean = 26;
+	IntegralToFloating = 27;
+	FixedPointCast = 28;
+	FixedPointToIntegral = 29;
+	IntegralToFixedPoint = 30;
+	FixedPointToBoolean = 31;
+	FloatingToIntegral = 32;
+	FloatingToBoolean = 33;
+	BooleanToSignedIntegral = 34;
+	FloatingCast = 35;
+	CPointerToObjCPointerCast = 36;
+	BlockPointerToObjCPointerCast = 37;
+	AnyPointerToBlockPointerCast = 38;
+	ObjCObjectLValueCast = 39;
+	FloatingRealToComplex = 40;
+	FloatingComplexToReal = 41;
+	FloatingComplexToBoolean = 42;
+	FloatingComplexCast = 43;
+	FloatingComplexToIntegralComplex = 44;
+	IntegralRealToComplex = 45;
+	IntegralComplexToReal = 46;
+	IntegralComplexToBoolean = 47;
+	IntegralComplexCast = 48;
+	IntegralComplexToFloatingComplex = 49;
+	ARCProduceObject = 50;
+	ARCConsumeObject = 51;
+	ARCReclaimReturnedObject = 52;
+	ARCExtendBlockObject = 53;
+	AtomicToNonAtomic = 54;
+	NonAtomicToAtomic = 55;
+	CopyAndAutoreleaseBlockObject = 56;
+	BuiltinFnToFnPtr = 57;
+	ZeroToOCLOpaqueType = 58;
+	AddressSpaceConversion = 59;
+	IntToOCLSampler = 60;
+}
+
+/*Operators are listed in the order of precedence */
+enum BinaryOperatorKind {
+	//Pointer-to-member operators
+	PtrMemD = 0;	
+	PtrMemI = 1;
+	//Multiplicative operators
+	Mul = 2;
+	Div = 3;
+	Rem = 4;
+	//Additive operators
+	Add = 5;
+	Sub = 6;
+	//Bitwise shift operators
+	Shl = 7;
+	Shr = 8;
+	//Three-way comparison operator
+	Cmp = 9;
+	//Relational operators
+	LT = 10;
+	GT = 11;
+	LE = 12;
+	GE = 13;
+	//Equality operators
+	EQ = 14;
+	NE = 15;
+	//Bitwise AND operator
+	And = 16;
+	//Bitwise XOR operator
+	Xor = 17;
+	//Bitwise OR operator
+	Or = 18;
+	//Logical AND operator
+	LAnd = 19;
+	//Logical OR operator
+	LOr = 20;
+	//Assignment operators
+	Assign = 21;
+	MulAssign = 22;
+	DivAssign = 23;
+	RemAssign = 24;
+	AddAssign = 25;
+	SubAssign = 26;
+	ShlAssign = 27;
+	ShrAssign = 28;
+	AndAssign = 29;
+	XorAssign = 30;
+	OrAssign = 31;
+	//Comma operator
+	Comma = 32;
+}	
+
+enum UnaryOperatorKind {
+	//Postfix increment and decrement
+	PostInc = 0;
+	PostDec = 1;
+	//Prefix increment and decrement
+	PreInc = 2;
+	PreDec = 3;
+	//Address and indirection
+	AddrOf = 4;
+	Deref = 5;
+	//Unary arithmetic
+	Plus = 6;
+	Minus = 7;
+	Not = 8;
+	LNot = 9;
+	//"__real expr"/"__imag expr" extension
+	Real = 10;
+	Imag = 11;
+	//__extension__ marker
+	Extension = 12;
+	//co_await operator
+	Coawait = 13;
+}
+
+enum ExpressionKind {
+	VAR_EXPR = 0;
+	LIT_EXPR = 1;
+	FUNC_EXPR = 2;
+	UNARY_EXPR = 3;
+	CAST_EXPR = 4;
+	BASIC_EXPR = 5;
+	ADDROF_EXPR = 6;
+	SIZEOF_EXPR = 7;
+	BINARY_EXPR = 8;
+	ARR_EXPR = 9;
+	CALL_EXPR = 10;
+	PTRCALL_EXPR = 11;
+	MEMBER_EXPR = 12;
+	PHI_EXPR = 13;
+	SELECT_EXPR = 14;
+}
+
+message Expr {
+	string type = 1;
+	ExpressionKind exprCode = 2;
+}
+
+message BasicExpr {
+	string type = 1;
+	ExpressionKind exprCode = 2;
+}
+
+message UnitExpr {
+	string type = 1;
+	ExpressionKind exprCode = 2;
+}
+
+message LitExpr {
+	string type = 1;
+	ExpressionKind exprCode = 2;
+	string val = 3;	
+}
+
+message VarExpr {
+	string type = 1;
+	ExpressionKind exprCode = 2;
+	string name = 3;
+}
+
+message FuncExpr {
+	string type = 1;
+	ExpressionKind exprCode = 2;
+	string name = 3;
+}
+
+message ArrayExpr {
+	string type = 1;
+	ExpressionKind exprCode = 2;
+	string name = 3
+	string index = 4;
+	string of = 5;
+	string var = 6;
+}
+
+message MemberExpr {
+	string type = 1;
+	ExpressionKind exprCode = 2;
+	string name = 3
+	string of = 4;
+}
+
+message BinaryExpr {
+	string type = 1;
+	BinaryOperatorKind opCode = 2;
+	string operand1 = 3;
+	string operand2 = 4;
+}
+
+message UnaryExpr {
+	string type = 1;
+	UnaryOperatorKind opCode = 2;
+	string operand = 3;
+}
+
+message AddrOfExpr {
+	string type = 1;
+	UnaryOperatorKind opCode = 2;
+	string operand = 3;	
+}
+
+message SizeOfExpr {
+	string type = 1;
+	UnaryOperatorKind opCode = 2;
+	string operand = 3;
+}
+
+message CastExpr {
+	string type = 1;
+	UnaryOperatorKind opCode = 2;
+	string operand = 3;
+	string to = 4; //Pointer to Type
+}
+
+message AllocExpr {
+	string type = 1;
+	ExpressionKind exprCode = 2;
+	string size = 3;
+}
+
+message CallExpr {
+	string type = 1;
+	ExpressionKind exprCode = 2;
+	string callee = 3;
+	repeated string args = 4;
+}
+
+message PhiExpr {
+	string type = 1;
+	ExpressionKind exprCode = 2;
+	repeated string args = 3;
+}
+
+message SelectExpr {
+	string type = 1;
+	ExpressionKind exprCode = 2;
+	string cond = 3;
+	string arg1 = 4;
+	string arg2 = 5;
+}
+
+enum InstrKind {
+	NOP_INSTR = 0;
+	BLOCK_ALL_INSTR = 1;
+	USE_INSTR = 2;
+	COND_READ_INSTR = 3;
+	UNDEF_VAL_INSTR = 4;
+	FILTER_INSTR = 5;
+	EX_READ_INSTR = 6;
+	ASSIGN_INSTR = 7;
+	RETURN_INSTR = 8;
+	CALL_INSTR = 9;
+	COND_INSTR = 10;
+	GOTO_INSTR = 11;
+}
+
+message InstrT {
+	string type = 1;
+	InstrKind instrCode = 2;
+}
+
+message AssignI {
+	string type = 1;
+	InstrKind instrCode = 2;
+	string lhs = 3;
+	string rhs = 4;
+}
+
+message GotoI {
+	string type = 1;
+	InstrKind instrCode = 2;
+	string label = 3;
+}
+
+message LabelI {
+	string type = 1;
+	InstrKind instrCode = 2;
+	string label = 3;
+}
+
+message CondI {
+	string type = 1;
+	InstrKind instrCode = 2;
+	string arg = 3;
+	string trueLabel = 4;
+	string falseLabel = 5;
+}
+
+message ReturnI {
+	string type = 1;
+	InstrKind instrCode = 2;
+	string arg = 3;
+}
+
+message CallI {
+	string type = 1;
+	InstrKind instrCode = 2;
+	string arg = 3;
+}
+
+message ReturnI {
+	string type = 1;
+	InstrKind instrCode = 2;
+	string arg = 3;
+}
+
+message UseI {
+	string type = 1;
+	InstrKind instrCode = 2;
+	repeated string vars = 3;
+}
+
+message ExReadI {
+	string type = 1;
+	InstrKind instrCode = 2;
+	repeated string vars = 3;
+}
+
+message CondReadI {
+	string type = 1;
+	InstrKind instrCode = 2;
+	string lhs = 3;
+	repeated string rhs = 4;
+}
+
+message LiveI {
+	string type = 1;
+	InstrKind instrCode = 2;
+	repeated string vars = 3;
+}
+
+message UnDefValI {
+	string type = 1;
+	InstrKind instrCode = 2;
+	string lhs = 3;
+}
+
+message BlockInfoI {
+	string type = 1;
+	InstrKind instrCode = 2;
+}
+
+message NopI {
+	string type = 1;
+	InstrKind instrCode = 2;
+}
+
+enum EdgeKind {
+	FALSE_EDGE = 0;
+	TRUE_EDGE = 1;
+	UNCOND_EDGE = 2;
+}
+
+message BasicBlockId {
+	int32 basicBlockId = 1;
+}
+
+message BB {
+	BasicBlockId id = 1;
+	repeated string insns = 2;
+	repeated string inEdges = 3;
+	repeated string outEdges = 4;
+	repeated CFGNode nodes = 5;
+}
+
+message BBEdge {
+	string from = 1;
+	string to = 2;
+	EdgeKind edgeKind = 3;
+}
+
+message CFGNode {
+	string insn = 1;
+	repeated string inEdges = 2;
+	repeated string outEdges  = 3;
+}
+
+message CFGNodeEdge {
+	string from = 1;
+	string to = 2;
+	EdgeKind edgeKind = 3;
+}
+
+message CFGNodeId {
+	int32 cfgNodeId = 1;
+}
+
+message CFGNodeMap {
+	CFGNodeId cfgNodeId = 1;
+	CFGNode cfgNode = 2;
+}
+
+
+message BBIdEdge {
+	BasicBlockId from = 1;
+	BasicBlockId to = 2;
+	EdgeKind edgeKind = 3;
+}
+
+message CFGNodeIdEdge {
+	CFGNodeId from = 1;
+	CFGNodeId to = 2;
+	EdgeKind edgeKind = 3;
+}
+
+message CFGNodeIdEdges {
+	repeated CFGNodeIdEdge cfgNodeIdEdges = 1;
+}
+
+message CFG {
+	repeated CFGNodeMap cfgNodeMap = 1;
+	CFGNodeIdEdges cfgEdges = 2;
+	string startNode = 3;
+	string endNode = 4;
+
+	message BBMap {
+		BasicBlockId basicBlockId = 1;
+		BB basicBlock = 2;
+	}
+
+	repeated BBMap bbMap = 5;
+	repeated BBIdEdge bbEdges = 6;
+	string startBB = 7;
+	string endBB = 8;
+}
+
+message Function {
+	string name = 1;
+	FunctionType type = 2;
+	repeated string paramNames = 3;
+	CFG cfg = 4;
+	bool body = 5;
+	repeated string insns = 6;
+}
+
+message VarName {
+	string varName = 1;
+}
+
+message FunctionName {
+	string functionName = 2;
+}
+
+message RecordName {
+	string recordName = 3;
+}
+
+message VarMap {
+	VarName varName = 1;
+	string type = 2;
+}
+
+message FuncMap {
+	FunctionName funcName = 1;
+	Function function = 2;
+}
+
+message RecordMap {
+	RecordName recordName = 1;
+	Record record = 2;
+}
+
+message TUnit {
+	string name = 1;
+	string description = 2;
+	repeated VarMap varMap = 3;
+	repeated FuncMap funcMap = 4;
+	repeated RecordMap recordMap = 5;
+}

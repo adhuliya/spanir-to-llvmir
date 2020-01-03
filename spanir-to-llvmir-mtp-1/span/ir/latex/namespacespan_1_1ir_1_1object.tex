@@ -1,0 +1,66 @@
+\hypertarget{namespacespan_1_1ir_1_1object}{}\section{span\+:\+:ir\+:\+:object Namespace Reference}
+\label{namespacespan_1_1ir_1_1object}\index{span\+::ir\+::object@{span\+::ir\+::object}}
+
+
+Objects in a translation unit.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classspan_1_1ir_1_1object_1_1BB}{BB}
+\begin{DoxyCompactList}\small\item\em A basic block containing a sequence of instructions. \end{DoxyCompactList}\item 
+class \hyperlink{classspan_1_1ir_1_1object_1_1BBEdge}{B\+B\+Edge}
+\begin{DoxyCompactList}\small\item\em A labeled edge connecting basic blocks. \end{DoxyCompactList}\item 
+class \hyperlink{classspan_1_1ir_1_1object_1_1CFG}{C\+FG}
+\begin{DoxyCompactList}\small\item\em Control Flow Graph. \end{DoxyCompactList}\item 
+class \hyperlink{classspan_1_1ir_1_1object_1_1CFGNode}{C\+F\+G\+Node}
+\begin{DoxyCompactList}\small\item\em A \hyperlink{classspan_1_1ir_1_1object_1_1CFG}{C\+FG} Node. \end{DoxyCompactList}\item 
+class \hyperlink{classspan_1_1ir_1_1object_1_1CFGNodeEdge}{C\+F\+G\+Node\+Edge}
+\begin{DoxyCompactList}\small\item\em A labeled edge connecting \hyperlink{classspan_1_1ir_1_1object_1_1CFG}{C\+FG} Nodes. \end{DoxyCompactList}\item 
+class \hyperlink{classspan_1_1ir_1_1object_1_1Function}{Function}
+\begin{DoxyCompactList}\small\item\em A function declaration/definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacespan_1_1ir_1_1object_aa260674d7902a7f6909b451361ab65fa}\label{namespacespan_1_1ir_1_1object_aa260674d7902a7f6909b451361ab65fa}} 
+using \hyperlink{namespacespan_1_1ir_1_1object_aa260674d7902a7f6909b451361ab65fa}{B\+B\+Id\+Edge} = std\+::pair$<$ Basic\+Block\+Id, std\+::pair$<$ Basic\+Block\+Id, Edge\+Kind $>$ $>$
+\begin{DoxyCompactList}\small\item\em Edge from bb id to bb id (useful for serialization/deserialization) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespacespan_1_1ir_1_1object_ad9072c15351c446d2051be5439f2b979}\label{namespacespan_1_1ir_1_1object_ad9072c15351c446d2051be5439f2b979}} 
+using \hyperlink{namespacespan_1_1ir_1_1object_ad9072c15351c446d2051be5439f2b979}{C\+F\+G\+Node\+Id\+Edge} = std\+::pair$<$ C\+F\+G\+Node\+Id, std\+::pair$<$ C\+F\+G\+Node\+Id, Edge\+Kind $>$ $>$
+\begin{DoxyCompactList}\small\item\em Edge from \hyperlink{classspan_1_1ir_1_1object_1_1CFGNode}{C\+F\+G\+Node} id to \hyperlink{classspan_1_1ir_1_1object_1_1CFGNode}{C\+F\+G\+Node} id (useful for serialization/deserialization) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespacespan_1_1ir_1_1object_af57b0b2ff157cfcd32dadb6f67920065}\label{namespacespan_1_1ir_1_1object_af57b0b2ff157cfcd32dadb6f67920065}} 
+using {\bfseries C\+F\+G\+Node\+Id\+Edges} = std\+::vector$<$ \hyperlink{namespacespan_1_1ir_1_1object_ad9072c15351c446d2051be5439f2b979}{C\+F\+G\+Node\+Id\+Edge} $>$
+\item 
+\mbox{\Hypertarget{namespacespan_1_1ir_1_1object_ab9acd8de65685eea78dc7e43c857a90c}\label{namespacespan_1_1ir_1_1object_ab9acd8de65685eea78dc7e43c857a90c}} 
+using {\bfseries C\+F\+G\+Node\+Map} = std\+::unordered\+\_\+map$<$ C\+F\+G\+Node\+Id, \hyperlink{classspan_1_1ir_1_1object_1_1CFGNode}{C\+F\+G\+Node} $>$
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacespan_1_1ir_1_1object_aa99af8553653a91247f327808d239765}\label{namespacespan_1_1ir_1_1object_aa99af8553653a91247f327808d239765}} 
+enum {\bfseries Edge\+Kind} \{ \newline
+{\bfseries F\+A\+L\+S\+E\+\_\+\+E\+D\+GE}, 
+{\bfseries T\+R\+U\+E\+\_\+\+E\+D\+GE}, 
+{\bfseries U\+N\+C\+O\+N\+D\+\_\+\+E\+D\+GE}, 
+{\bfseries F\+A\+L\+S\+E\+\_\+\+E\+D\+GE}, 
+\newline
+{\bfseries T\+R\+U\+E\+\_\+\+E\+D\+GE}, 
+{\bfseries U\+N\+C\+O\+N\+D\+\_\+\+E\+D\+GE}
+ \}
+\item 
+\mbox{\Hypertarget{namespacespan_1_1ir_1_1object_aa99af8553653a91247f327808d239765}\label{namespacespan_1_1ir_1_1object_aa99af8553653a91247f327808d239765}} 
+enum {\bfseries Edge\+Kind} \{ \newline
+{\bfseries F\+A\+L\+S\+E\+\_\+\+E\+D\+GE}, 
+{\bfseries T\+R\+U\+E\+\_\+\+E\+D\+GE}, 
+{\bfseries U\+N\+C\+O\+N\+D\+\_\+\+E\+D\+GE}, 
+{\bfseries F\+A\+L\+S\+E\+\_\+\+E\+D\+GE}, 
+\newline
+{\bfseries T\+R\+U\+E\+\_\+\+E\+D\+GE}, 
+{\bfseries U\+N\+C\+O\+N\+D\+\_\+\+E\+D\+GE}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Objects in a translation unit. 

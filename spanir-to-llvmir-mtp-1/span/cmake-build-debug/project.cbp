@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="project"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\local\;CMake Files\..\..\..\..\..\local\packages-live\;CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\;CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\;CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\;CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\;CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\;CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\;CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\;CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\;CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Platform\;CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Internal\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="project">
+				<Option output="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/cmake-build-debug/libproject.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 project"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="project/fast">
+				<Option output="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/cmake-build-debug/libproject.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 project/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/library.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/library.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/CMakeCInformation.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/CMakeCXXInformation.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/CMakeCommonLanguageInclude.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/CMakeCompilerIdDetection.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/CMakeDetermineCCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/CMakeDetermineCXXCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/CMakeDetermineCompileFeatures.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/CMakeDetermineCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/CMakeDetermineCompilerABI.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/CMakeDetermineCompilerId.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/CMakeDetermineSystem.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/CMakeFindBinUtils.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/CMakeFindCodeBlocks.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/CMakeGenericSystem.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/CMakeInitializeConfigs.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/CMakeLanguageInformation.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/CMakeParseImplicitLinkInfo.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/CMakeSystemSpecificInformation.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/CMakeSystemSpecificInitialize.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/CMakeTestCCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/CMakeTestCXXCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/CMakeTestCompilerCommon.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/CMakeUnixFindMake.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/ProcessorCount.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/ADSP-DetermineCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/ARMCC-DetermineCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/AppleClang-DetermineCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/Borland-DetermineCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/Bruce-C-DetermineCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/CMakeCommonCompilerMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/Clang-DetermineCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/Clang-DetermineCompilerInternal.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/Compaq-C-DetermineCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/Cray-DetermineCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/Embarcadero-DetermineCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/Fujitsu-DetermineCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/GHS-DetermineCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/GNU-C-DetermineCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/GNU-C-FeatureTests.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/GNU-C.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/GNU-CXX-FeatureTests.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/GNU-CXX.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/GNU-FindBinUtils.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/GNU.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/HP-C-DetermineCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/HP-CXX-DetermineCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/IAR-DetermineCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/Intel-DetermineCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/MIPSpro-DetermineCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/MSVC-DetermineCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/NVIDIA-DetermineCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/PGI-DetermineCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/PathScale-DetermineCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/SCO-DetermineCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/SDCC-C-DetermineCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/SunPro-C-DetermineCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/TI-DetermineCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/Watcom-DetermineCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/XL-C-DetermineCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/XL-CXX-DetermineCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/zOS-C-DetermineCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Compiler\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Platform/Linux-Determine-CXX.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Platform\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Platform/Linux-GNU-C.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Platform\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Platform/Linux-GNU-CXX.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Platform\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Platform/Linux-GNU.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Platform\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Platform/Linux.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Platform\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Platform/UnixPaths.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Platform\"/>
+		</Unit>
+		<Unit filename="/home/codeman/itsoflife/mydata/git/research/code/spanir-to-llvmir-git/project/../../../../../local/packages-live/clion-2018.2/bin/cmake/linux/share/cmake-3.12/Modules/Internal/FeatureTesting.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\local\packages-live\clion-2018.2\bin\cmake\linux\share\cmake-3.12\Modules\Internal\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
